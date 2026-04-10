@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <!-- ============================================================
+       FarmGPS - Főoldal
+       File: index.html
+       Üzemeltető: SUGÁR-KER 2002 Bt. | Tulajdonos: Vígvári Sándor
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FarmGPS – Hi-Target és FJ Dynamics robotkormány-rendszerek magyarországi és külföldi forgalmazása és szakszerű beépítése. Vígvári Sándor, SUGÁR-KER 2002 Bt." />
+  <meta name="keywords" content="robotkormány, GPS mezőgazdaság, Hi-Target, FJ Dynamics, RTK, precíziós gazdálkodás, traktor automatizálás, FarmGPS" />
+  <meta name="author" content="Vígvári Sándor, SUGÁR-KER 2002 Bt." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="FarmGPS – Precíziós GPS Robotkormány Rendszerek" />
+  <meta property="og:description" content="Hi-Target és FJ Dynamics robotkormány-rendszerek értékesítése és beépítése Magyarországon." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="hu_HU" />
+
+  <title>FarmGPS – Precíziós Robotkormány Rendszerek</title>
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" type="image/png" href="images/farmgpslogo.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER / NAVIGATION
+       ============================================================ -->
+  <header id="header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+
+        <!-- Logo -->
+        <a href="#hero" class="logo" aria-label="FarmGPS főoldal">
+          <img src="images/farmgpslogo.png" alt="FarmGPS logó" width="48" height="48" />
+          <div class="logo-text">
+            <span class="logo-name">FarmGPS</span>
+            <span class="logo-tagline">Hi-Target &amp; FJ Dynamics</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav aria-label="Főnavigáció">
+          <ul class="nav-links">
+            <li><a href="#hero" data-i18n="nav_home">Főoldal</a></li>
+            <li><a href="#about" data-i18n="nav_about">Rólunk</a></li>
+            <li><a href="#services" data-i18n="nav_services">Szolgáltatások</a></li>
+            <li><a href="#products" data-i18n="nav_products">Termékeink</a></li>
+            <li><a href="#why" data-i18n="nav_why">Miért mi?</a></li>
+            <li><a href="#references" data-i18n="nav_references">Referenciák</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">Kapcsolat</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <!-- Language Switcher -->
+          <div class="lang-switcher" role="group" aria-label="Nyelvválasztó">
+            <button class="lang-btn active" data-lang="hu" aria-pressed="true">HU</button>
+            <button class="lang-btn" data-lang="ro" aria-pressed="false">RO</button>
+          </div>
+
+          <!-- CTA Button -->
+          <a href="#contact" class="btn btn-primary" data-i18n="nav_cta">Ajánlatot kérek</a>
+
+          <!-- Hamburger -->
+          <button class="hamburger" aria-label="Menü megnyitása" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" aria-label="Mobil navigáció" aria-hidden="true">
+    <ul>
+      <li><a href="#hero" data-i18n="nav_home">Főoldal</a></li>
+      <li><a href="#about" data-i18n="nav_about">Rólunk</a></li>
+      <li><a href="#services" data-i18n="nav_services">Szolgáltatások</a></li>
+      <li><a href="#products" data-i18n="nav_products">Termékeink</a></li>
+      <li><a href="#why" data-i18n="nav_why">Miért mi?</a></li>
+      <li><a href="#references" data-i18n="nav_references">Referenciák</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">Kapcsolat</a></li>
+    </ul>
+    <div class="mobile-nav-footer">
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="hu">HU</button>
+        <button class="lang-btn" data-lang="ro">RO</button>
+      </div>
+      <a href="#contact" class="btn btn-primary" style="font-size:0.85rem;padding:10px 20px;" data-i18n="nav_cta">Ajánlatot kérek</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ============================================================
+         HERO SECTION
+         ============================================================ -->
+    <section id="hero" aria-label="Bemutatkozás">
+      <div class="hero-bg-pattern" aria-hidden="true"></div>
+      <div class="hero-grid-overlay" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-inner">
+
+          <!-- Hero Content -->
+          <div class="hero-content">
+            <div class="hero-badge-wrap fade-up">
+              <div class="hero-badge-dot" aria-hidden="true">
+                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="6" cy="6" r="4"/>
+                </svg>
+              </div>
+              <span class="hero-badge-text" data-i18n="hero_badge">Hivatalos Hi-Target &amp; FJ Dynamics forgalmazó</span>
+            </div>
+
+            <h1 class="hero-title fade-up fade-up-delay-1">
+              <span data-i18n="hero_title_1">Precíziós GPS</span>
+              <span class="hero-title-accent" data-i18n="hero_title_2">Robotkormány</span>
+              <span data-i18n="hero_title_3">Rendszerek</span>
+            </h1>
+
+            <p class="hero-subtitle fade-up fade-up-delay-2" data-i18n="hero_subtitle">
+              Professzionális mezőgazdasági robotkormány-rendszerek értékesítése és szakszerű beépítése Magyarországon és külföldön. Bízza traktorát a technológiára — koncentráljon arra, ami igazán számít.
+            </p>
+
+            <div class="hero-cta-group fade-up fade-up-delay-3">
+              <a href="#contact" class="btn btn-primary" data-i18n="hero_cta_primary">Ajánlatot kérek</a>
+              <a href="#products" class="btn btn-outline" data-i18n="hero_cta_secondary">Termékeink</a>
+            </div>
+
+            <div class="hero-stats fade-up fade-up-delay-4">
+              <div class="hero-stat">
+                <span class="hero-stat-num">20+</span>
+                <span class="hero-stat-label" data-i18n="hero_stat_1">Év tapasztalat</span>
+              </div>
+              <div class="hero-stat-divider" aria-hidden="true"></div>
+              <div class="hero-stat">
+                <span class="hero-stat-num">150+</span>
+                <span class="hero-stat-label" data-i18n="hero_stat_2">Beépített rendszer</span>
+              </div>
+              <div class="hero-stat-divider" aria-hidden="true"></div>
+              <div class="hero-stat">
+                <span class="hero-stat-num">2.5</span>
+                <span class="hero-stat-label" data-i18n="hero_stat_3">cm RTK pontosság</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual Card -->
+          <div class="hero-visual fade-up fade-up-delay-2" aria-hidden="true">
+            <div class="hero-visual-glow"></div>
+            <div class="hero-visual-card">
+              <ul class="hero-feature-list">
+                <li class="hero-feature-item">
+                  <div class="hero-feature-icon">🛰️</div>
+                  RTK pontosság: ±2,5 cm
+                </li>
+                <li class="hero-feature-item">
+                  <div class="hero-feature-icon">🤖</div>
+                  Teljesen automatikus kormányzás
+                </li>
+                <li class="hero-feature-item">
+                  <div class="hero-feature-icon">📱</div>
+                  ISOBUS kompatibilis rendszerek
+                </li>
+                <li class="hero-feature-item">
+                  <div class="hero-feature-icon">⚡</div>
+                  Gyors, profi helyszíni beépítés
+                </li>
+                <li class="hero-feature-item">
+                  <div class="hero-feature-icon">🔧</div>
+                  Hosszú távú szerviz &amp; garancia
+                </li>
+              </ul>
+              <div class="hero-divider"></div>
+              <div class="hero-brands">
+                <span class="hero-brand-tag">HI-TARGET</span>
+                <span class="hero-brand-tag">FJ DYNAMICS</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero-scroll" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ABOUT SECTION
+         ============================================================ -->
+    <section id="about" aria-label="Rólunk">
+      <div class="container">
+        <div class="about-inner">
+
+          <!-- Visual -->
+          <div class="about-visual fade-up">
+            <div class="about-image-frame">
+              <div class="about-image-placeholder">
+                <div class="placeholder-icon" aria-hidden="true">👨‍🌾</div>
+                <p>Vígvári Sándor fotója<br/>
+                  <small style="color:var(--gray-300)">(kép feltöltése ajánlott)</small>
+                </p>
+              </div>
+            </div>
+            <div class="about-accent-card" aria-label="Tapasztalat">
+              <div class="acc-num">20+</div>
+              <div class="acc-label" data-i18n="about_exp">Év tapasztalat</div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="about-content">
+            <span class="section-badge fade-up" data-i18n="about_badge">Rólunk</span>
+            <h2 class="section-title fade-up fade-up-delay-1" data-i18n="about_title">
+              Vígvári Sándor — A precíziós mezőgazdaság szakértője
+            </h2>
+            <div class="about-text">
+              <p class="fade-up fade-up-delay-2" data-i18n="about_p1">
+                A SUGÁR-KER 2002 Kereskedelmi és Szolgáltató Betéti Társaság tulajdonosaként és ügyvezetőjeként Vígvári Sándor több évtizedes tapasztalattal rendelkezik a mezőgazdasági technológia területén. Szaktudása és elkötelezett ügyfélközpontú szemlélete tette a FarmGPS-t megbízható partnerré a gazdálkodók számára.
+              </p>
+              <p class="fade-up fade-up-delay-3" data-i18n="about_p2">
+                A Hi-Target és FJ Dynamics prémium márkák magyarországi és külföldi forgalmazójaként minden egyes beépítést személyesen felügyel — garantálva, hogy az Ön traktora a legjobb kezekben van. Munkáját a precizitás, a megbízhatóság és a hosszú távú ügyfélkapcsolat határozza meg.
+              </p>
+              <p class="fade-up fade-up-delay-4" data-i18n="about_p3">
+                Tevékenységünk elsősorban GPS robotkormány-rendszerek értékesítésére és beépítésére fókuszál; emellett klímaszerelési szolgáltatásokat is nyújtunk.
+              </p>
+            </div>
+
+            <div class="about-badges">
+              <div class="about-badge-item fade-up fade-up-delay-1">
+                <span class="about-badge-icon" aria-hidden="true">🏆</span>
+                <span class="about-badge-text" data-i18n="about_certified">Hivatalos forgalmazó</span>
+              </div>
+              <div class="about-badge-item fade-up fade-up-delay-2">
+                <span class="about-badge-icon" aria-hidden="true">🌍</span>
+                <span class="about-badge-text" data-i18n="about_brands">Hi-Target &amp; FJ Dynamics</span>
+              </div>
+              <div class="about-badge-item fade-up fade-up-delay-3">
+                <span class="about-badge-icon" aria-hidden="true">🛡️</span>
+                <span class="about-badge-text" data-i18n="about_guarantee">Garancia &amp; szerviz</span>
+              </div>
+              <div class="about-badge-item fade-up fade-up-delay-4">
+                <span class="about-badge-icon" aria-hidden="true">📍</span>
+                <span class="about-badge-text">Magyarország &amp; környező országok</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SERVICES SECTION
+         ============================================================ -->
+    <section id="services" aria-label="Szolgáltatások">
+      <div class="container">
+        <header class="services-header">
+          <span class="section-badge fade-up" data-i18n="services_badge">Szolgáltatásaink</span>
+          <h2 class="section-title fade-up fade-up-delay-1" data-i18n="services_title">Teljes körű robotkormány megoldások</h2>
+          <p class="section-subtitle fade-up fade-up-delay-2" data-i18n="services_subtitle">A konzultációtól a beépítésen át az utógondozásig — minden lépésben mellettünk van.</p>
+        </header>
+
+        <div class="services-grid">
+          <article class="service-card fade-up fade-up-delay-1">
+            <div class="service-icon" aria-hidden="true">💬</div>
+            <h3 data-i18n="srv1_title">Szaktanácsadás</h3>
+            <p data-i18n="srv1_desc">Személyre szabott tanácsadás a megfelelő rendszer kiválasztásához, figyelembe véve traktorja típusát, gazdaságának méretét és a tervezett felhasználást.</p>
+          </article>
+
+          <article class="service-card fade-up fade-up-delay-2">
+            <div class="service-icon" aria-hidden="true">🔩</div>
+            <h3 data-i18n="srv2_title">Szakszerű beépítés</h3>
+            <p data-i18n="srv2_desc">Gyári szintű, precíz beépítés helyszínen vagy műhelyünkben. Minden telepítés teszteléssel, kalibrálással és betanítással zárul.</p>
+          </article>
+
+          <article class="service-card fade-up fade-up-delay-3">
+            <div class="service-icon" aria-hidden="true">🛰️</div>
+            <h3 data-i18n="srv3_title">RTK Konfiguráció</h3>
+            <p data-i18n="srv3_desc">±2,5 cm pontosságú RTK korrekciós jel beállítása és optimalizálása a maximális precizitás érdekében.</p>
+          </article>
+
+          <article class="service-card fade-up fade-up-delay-1">
+            <div class="service-icon" aria-hidden="true">🛠️</div>
+            <h3 data-i18n="srv4_title">Szerviz &amp; Karbantartás</h3>
+            <p data-i18n="srv4_desc">Gyors és megbízható szerviz, garanciális javítás, frissítések és folyamatos technikai támogatás beépítés után is.</p>
+          </article>
+
+          <article class="service-card fade-up fade-up-delay-2">
+            <div class="service-icon" aria-hidden="true">🎓</div>
+            <h3 data-i18n="srv5_title">Oktatás &amp; Betanítás</h3>
+            <p data-i18n="srv5_desc">A rendszer telepítése után részletes betanítást biztosítunk, hogy Ön és munkatársai magabiztosan kezeljék a technológiát.</p>
+          </article>
+
+          <article class="service-card fade-up fade-up-delay-3">
+            <div class="service-icon" aria-hidden="true">🗺️</div>
+            <h3 data-i18n="srv6_title">Területi lefedettség</h3>
+            <p data-i18n="srv6_desc">Magyarország és a szomszédos országok teljes területén vállalunk kiszállást és beépítést — rugalmas időpontokban.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PRODUCTS SECTION
+         ============================================================ -->
+    <section id="products" aria-label="Termékeink">
+      <div class="container">
+        <header class="products-header">
+          <span class="section-badge fade-up" data-i18n="products_badge">Termékeink</span>
+          <h2 class="section-title fade-up fade-up-delay-1" data-i18n="products_title">Prémium robotkormány rendszerek</h2>
+          <p class="section-subtitle fade-up fade-up-delay-2" data-i18n="products_subtitle">Kizárólag a világ vezető gyártóinak termékeit forgalmazzuk — minőségi kompromisszumok nélkül.</p>
+        </header>
+
+        <div class="products-grid">
+
+          <!-- Hi-Target -->
+          <article class="product-card fade-up fade-up-delay-1">
+            <div class="product-card-header">
+              <div class="product-brand-badge">
+                🛰️ Hi-Target
+              </div>
+              <h3 data-i18n="prod_hitarget_title">Hi-Target Robotkormány</h3>
+              <p data-i18n="prod_hitarget_desc">A Hi-Target globálisan elismert precíziós mezőgazdasági technológia gyártó. Rendszereik kiemelkedő megbízhatóságot és pontosságot nyújtanak a legigényesebb gazdálkodók számára is.</p>
+            </div>
+            <div class="product-card-body">
+              <ul class="product-features">
+                <li data-i18n="prod_feature_rtk">RTK pontosság: ±2,5 cm</li>
+                <li data-i18n="prod_feature_isobus">ISOBUS kompatibilis</li>
+                <li data-i18n="prod_feature_signal">20 perc jelvesztés-tolerancia</li>
+                <li>Minden traktor márkához illeszthető</li>
+                <li>Többéves garancia</li>
+              </ul>
+              <div class="product-card-actions">
+                <a href="#contact" class="btn btn-primary" style="flex:1" data-i18n="prod_inquiry">Termékajánlat kérése</a>
+                <a href="#contact" class="btn btn-outline-dark" data-i18n="prod_details">Részletek</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- FJ Dynamics -->
+          <article class="product-card fade-up fade-up-delay-2">
+            <div class="product-card-header">
+              <div class="product-brand-badge">
+                🤖 FJ Dynamics
+              </div>
+              <h3 data-i18n="prod_fjdynamics_title">FJ Dynamics Robotkormány</h3>
+              <p data-i18n="prod_fjdynamics_desc">Az FJ Dynamics az AT2 és AT2 Max modellekkel Európa egyik legnépszerűbb robotkormány-rendszerét kínálja — ISOBUS-kompatibilis, 10,1"–12,1" kijelzővel, kiváló ár-érték arányban.</p>
+            </div>
+            <div class="product-card-body">
+              <ul class="product-features">
+                <li data-i18n="prod_feature_display">10,1" / 12,1" érintőképernyő</li>
+                <li data-i18n="prod_feature_isobus">ISOBUS kompatibilis</li>
+                <li data-i18n="prod_feature_auto">Automatikus akadályfelismerés</li>
+                <li data-i18n="prod_feature_farm">FieldFusion farmmenedzsment</li>
+                <li>Európa egyik legnépszerűbb rendszere</li>
+              </ul>
+              <div class="product-card-actions">
+                <a href="#contact" class="btn btn-primary" style="flex:1" data-i18n="prod_inquiry">Termékajánlat kérése</a>
+                <a href="#contact" class="btn btn-outline-dark" data-i18n="prod_details">Részletek</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WHY US SECTION
+         ============================================================ -->
+    <section id="why" aria-label="Miért válasszon minket">
+      <div class="container">
+        <header class="why-header">
+          <span class="section-badge fade-up" data-i18n="why_badge">Miért válasszon minket?</span>
+          <h2 class="section-title fade-up fade-up-delay-1" data-i18n="why_title">A különbség, amit érez majd</h2>
+          <p class="section-subtitle fade-up fade-up-delay-2" data-i18n="why_subtitle">Nem csupán terméket adunk el — partnert nyernek bennünk, aki a gazdasága sikerét támogatja.</p>
+        </header>
+
+        <div class="why-grid">
+          <div class="why-card fade-up fade-up-delay-1">
+            <div class="why-card-icon" aria-hidden="true">💰</div>
+            <h3 data-i18n="why1_title">Megtérülő befektetés</h3>
+            <p data-i18n="why1_desc">Ügyfeleink tapasztalata szerint a robotkormány rendszer éves szinten akár 2,8 millió Ft üzemanyag-megtakarítást eredményez — a beruházás gyorsan megtérül.</p>
+          </div>
+
+          <div class="why-card fade-up fade-up-delay-2">
+            <div class="why-card-icon" aria-hidden="true">👤</div>
+            <h3 data-i18n="why2_title">Helyi szakértő</h3>
+            <p data-i18n="why2_desc">Vígvári Sándor személyesen felügyeli minden beépítést. Nem call-centeres ügyfélszolgálat — valódi szakember, aki ismeri az Ön helyzetét.</p>
+          </div>
+
+          <div class="why-card fade-up fade-up-delay-3">
+            <div class="why-card-icon" aria-hidden="true">🏅</div>
+            <h3 data-i18n="why3_title">Prémium márkák</h3>
+            <p data-i18n="why3_desc">Kizárólag a globálisan elismert Hi-Target és FJ Dynamics rendszereket forgalmazzuk — garanciával, szervizháttérrel.</p>
+          </div>
+
+          <div class="why-card fade-up fade-up-delay-1">
+            <div class="why-card-icon" aria-hidden="true">🚗</div>
+            <h3 data-i18n="why4_title">Rugalmas kiszállás</h3>
+            <p data-i18n="why4_desc">Magyarország és a szomszédos országok területén rugalmas időpontokban, az Ön helyszínén végezzük el a telepítést.</p>
+          </div>
+
+          <div class="why-card fade-up fade-up-delay-2">
+            <div class="why-card-icon" aria-hidden="true">📞</div>
+            <h3 data-i18n="why5_title">Folyamatos támogatás</h3>
+            <p data-i18n="why5_desc">A beépítés után sem marad egyedül. Telefonos és személyes szerviz, frissítések, hosszú távú partnerség.</p>
+          </div>
+
+          <div class="why-card fade-up fade-up-delay-3">
+            <div class="why-card-icon" aria-hidden="true">🎯</div>
+            <h3 data-i18n="why6_title">±2,5 cm pontosság</h3>
+            <p data-i18n="why6_desc">RTK rendszereink garantálják a legmagasabb sorcsatlakozási pontosságot — jelvesztés esetén is 20 percig tartja a pontosságot.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         REFERENCES SECTION
+         ============================================================ -->
+    <section id="references" aria-label="Referenciák">
+      <div class="container">
+        <header class="references-header">
+          <span class="section-badge fade-up" data-i18n="ref_badge">Referenciák</span>
+          <h2 class="section-title fade-up fade-up-delay-1" data-i18n="ref_title">Amit ügyfeleink mondanak</h2>
+          <p class="section-subtitle fade-up fade-up-delay-2" data-i18n="ref_subtitle">Valódi gazdák, valódi eredmények.</p>
+        </header>
+
+        <div class="references-grid">
+          <article class="ref-card fade-up fade-up-delay-1">
+            <div class="ref-stars" aria-label="5 csillag">★★★★★</div>
+            <div class="ref-quote" aria-hidden="true">"</div>
+            <p class="ref-text" data-i18n="ref1_text">Vígvári Sándor szakmai tudása és precíz munkája meggyőzött. A beépítés után azonnal éreztem a különbséget — kevesebb átfedés, jobb sorvezetés, kevesebb üzemanyag.</p>
+            <div class="ref-author">
+              <div class="ref-avatar" aria-hidden="true">KI</div>
+              <div>
+                <div class="ref-name" data-i18n="ref1_name">Kovács István</div>
+                <div class="ref-role" data-i18n="ref1_role">Szántóföldi gazdálkodó, Hajdú-Bihar megye</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="ref-card fade-up fade-up-delay-2">
+            <div class="ref-stars" aria-label="5 csillag">★★★★★</div>
+            <div class="ref-quote" aria-hidden="true">"</div>
+            <p class="ref-text" data-i18n="ref2_text">A FJ Dynamics AT2 rendszer beépítése után a munkám lényegesen egyszerűbbé vált. A betanítás alapos volt, azóta is bármikor elérhetem Sándort ha kérdésem van.</p>
+            <div class="ref-author">
+              <div class="ref-avatar" aria-hidden="true">MG</div>
+              <div>
+                <div class="ref-name" data-i18n="ref2_name">Moldovan Gheorghe</div>
+                <div class="ref-role" data-i18n="ref2_role">Gazda, Románia</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="ref-card fade-up fade-up-delay-3">
+            <div class="ref-stars" aria-label="5 csillag">★★★★★</div>
+            <div class="ref-quote" aria-hidden="true">"</div>
+            <p class="ref-text" data-i18n="ref3_text">Már a második rendszert vásároltam Vígváritól. Megbízható, pontos, gyors kiszállás — tökéletes partner a precíziós gazdálkodáshoz.</p>
+            <div class="ref-author">
+              <div class="ref-avatar" aria-hidden="true">NT</div>
+              <div>
+                <div class="ref-name" data-i18n="ref3_name">Nagy Tibor</div>
+                <div class="ref-role" data-i18n="ref3_role">Gazdaságvezető, Szabolcs-Szatmár-Bereg megye</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT SECTION
+         ============================================================ -->
+    <section id="contact" aria-label="Kapcsolat">
+      <div class="container">
+        <div class="contact-inner">
+
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <span class="section-badge fade-up" data-i18n="contact_badge">Kapcsolat</span>
+            <h2 class="section-title fade-up fade-up-delay-1" data-i18n="contact_title">Kérjen személyre szabott ajánlatot!</h2>
+            <p class="section-subtitle fade-up fade-up-delay-2" data-i18n="contact_subtitle">Vegye fel velünk a kapcsolatot és Vígvári Sándor személyesen segít megtalálni az Ön gazdaságához legjobb megoldást.</p>
+
+            <div class="contact-details">
+
+              <div class="contact-detail-item fade-up fade-up-delay-1">
+                <div class="contact-detail-icon" aria-hidden="true">📞</div>
+                <div>
+                  <div class="contact-detail-label" data-i18n="contact_phone_label">Telefon</div>
+                  <!-- TODO: Töltse ki a valós telefonszámot -->
+                  <a href="tel:+36XXXXXXXXX" class="contact-detail-value">+36 XX XXX XXXX</a>
+                </div>
+              </div>
+
+              <div class="contact-detail-item fade-up fade-up-delay-2">
+                <div class="contact-detail-icon" aria-hidden="true">✉️</div>
+                <div>
+                  <div class="contact-detail-label" data-i18n="contact_email_label">E-mail</div>
+                  <!-- TODO: Töltse ki a valós e-mail címet -->
+                  <a href="mailto:info@farmgps.hu" class="contact-detail-value">info@farmgps.hu</a>
+                </div>
+              </div>
+
+              <div class="contact-detail-item fade-up fade-up-delay-3">
+                <div class="contact-detail-icon" aria-hidden="true">🕐</div>
+                <div>
+                  <div class="contact-detail-label" data-i18n="contact_hours_label">Nyitva</div>
+                  <div class="contact-detail-value" data-i18n="contact_hours_val">H–P: 8:00–18:00</div>
+                </div>
+              </div>
+
+              <div class="contact-detail-item fade-up fade-up-delay-4">
+                <div class="contact-detail-icon" aria-hidden="true">📍</div>
+                <div>
+                  <div class="contact-detail-label" data-i18n="contact_address_label">Cím</div>
+                  <!-- TODO: Töltse ki a valós címet -->
+                  <div class="contact-detail-value" data-i18n="contact_address_val">Magyarország</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrap fade-up fade-up-delay-2">
+            <form id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name" data-i18n="contact_name">Teljes név</label>
+                  <input type="text" id="name" name="name" required autocomplete="name"
+                    placeholder="Pl. Kovács János"
+                    data-i18n-placeholder="contact_name" />
+                </div>
+                <div class="form-group">
+                  <label for="phone" data-i18n="contact_phone">Telefonszám</label>
+                  <input type="tel" id="phone" name="phone" autocomplete="tel"
+                    placeholder="+36 XX XXX XXXX" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email" data-i18n="contact_email">E-mail cím</label>
+                <input type="email" id="email" name="email" required autocomplete="email"
+                  placeholder="pelda@email.hu" />
+              </div>
+
+              <div class="form-group">
+                <label for="tractor" data-i18n="contact_tractor">Traktor típusa / márka</label>
+                <input type="text" id="tractor" name="tractor"
+                  placeholder="Pl. John Deere 6130R" />
+              </div>
+
+              <div class="form-group">
+                <label for="message" data-i18n="contact_message">Üzenet / kérdés</label>
+                <textarea id="message" name="message" rows="4"
+                  placeholder="Írja le kérdését vagy kérjen ajánlatot..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:15px;" data-i18n="contact_send">
+                Ajánlatot kérek
+              </button>
+
+              <p class="form-privacy">
+                🔒 <span data-i18n="contact_privacy">Az elküldött adatokat kizárólag a megkeresés megválaszolásához használjuk.</span>
+              </p>
+            </form>
+
+            <div class="form-success" role="alert"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#hero" class="logo" aria-label="FarmGPS főoldal">
+            <img src="images/farmgpslogo.png" alt="FarmGPS logó" width="40" height="40" />
+            <div class="logo-text">
+              <span class="logo-name">FarmGPS</span>
+              <span class="logo-tagline">Hi-Target &amp; FJ Dynamics</span>
+            </div>
+          </a>
+          <p class="footer-tagline" data-i18n="footer_tagline">Precíziós GPS robotkormány rendszerek — Magyarország és környező országok</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 data-i18n="footer_links">Gyors linkek</h4>
+          <ul>
+            <li><a href="#about" data-i18n="nav_about">Rólunk</a></li>
+            <li><a href="#services" data-i18n="nav_services">Szolgáltatások</a></li>
+            <li><a href="#products" data-i18n="nav_products">Termékeink</a></li>
+            <li><a href="#why" data-i18n="nav_why">Miért mi?</a></li>
+            <li><a href="#references" data-i18n="nav_references">Referenciák</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">Kapcsolat</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div class="footer-col">
+          <h4 data-i18n="footer_legal">Jogi információk</h4>
+          <ul>
+            <li><a href="#" data-i18n="footer_privacy">Adatvédelmi tájékoztató</a></li>
+            <li><a href="#" data-i18n="footer_terms">Általános feltételek</a></li>
+            <li><a href="#" data-i18n="footer_cookie">Cookie beállítások</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="footer-year"></span>
+          <span data-i18n="footer_company">SUGÁR-KER 2002 Kereskedelmi és Szolgáltató Betéti Társaság</span>.
+          <span data-i18n="footer_rights">Minden jog fenntartva.</span>
+        </p>
+        <p data-i18n="footer_owner">Tulajdonos: Vígvári Sándor</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       COOKIE BANNER
+       ============================================================ -->
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie tájékoztató" aria-live="polite">
+    <p class="cookie-text">
+      🍪 Weboldalunk sütiket (cookie-kat) használ a jobb felhasználói élmény érdekében.
+      <a href="#">Adatvédelmi tájékoztató</a>
+    </p>
+    <div class="cookie-actions">
+      <button class="cookie-accept" id="cookie-accept">Elfogadom</button>
+      <button class="cookie-reject" id="cookie-reject">Elutasítom</button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SCRIPTS
+       ============================================================ -->
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Set current year in footer
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

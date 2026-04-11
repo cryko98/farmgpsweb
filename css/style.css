@@ -674,20 +674,23 @@ h1, h2, h3, h4, h5 {
 
 .hero-brands {
   display: flex;
-  gap: 10px;
+  gap: 16px;
   align-items: center;
 }
 
-.hero-brand-tag {
-  background: rgba(255,255,255,0.10);
-  border: 1px solid rgba(255,255,255,0.18);
-  border-radius: 7px;
-  padding: 7px 13px;
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: rgba(255,255,255,0.85);
-  letter-spacing: 0.06em;
+/* Partner logók a hero kártyán — mix-blend-mode:screen eltünteti a fekete hátteret */
+.hero-brand-logo {
+  height: 26px;
+  width: auto;
+  max-width: 110px;
+  object-fit: contain;
+  mix-blend-mode: screen;
+  opacity: 0.85;
+  filter: brightness(1.15);
+  transition: opacity 0.25s;
 }
+
+.hero-brand-logo:hover { opacity: 1; }
 
 /* Scroll indicator */
 .hero-scroll {
@@ -952,19 +955,25 @@ h1, h2, h3, h4, h5 {
   opacity: 0.6;
 }
 
-.product-brand-badge {
-  display: inline-flex;
+/* Termék kártya partner logók */
+.product-brand-logo-wrap {
+  height: 44px;
+  display: flex;
   align-items: center;
-  background: var(--green-700);
-  color: white;
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  padding: 4px 11px;
-  border-radius: 50px;
-  margin-bottom: 13px;
+  margin-bottom: 14px;
 }
+
+/* mix-blend-mode:multiply eltünteti a fekete hátteret a világos card-header alapon */
+.product-brand-logo {
+  height: 38px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  filter: contrast(1.05);
+}
+
+.product-brand-logo.fj { height: 32px; }
 
 .product-card-header h3 {
   font-size: 1.3rem;
@@ -1367,6 +1376,45 @@ a.contact-detail-value:hover { color: var(--green-700); }
   margin-top: 14px;
   color: var(--gray-500);
 }
+
+/* Footer partner logók */
+.footer-partners {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-partners-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-600);
+}
+
+.footer-partner-logos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Sötét footer háttéren mix-blend-mode:screen tünteti el a fekete hátteret */
+.footer-partner-logo {
+  height: 24px;
+  width: auto;
+  max-width: 110px;
+  object-fit: contain;
+  mix-blend-mode: screen;
+  opacity: 0.75;
+  filter: brightness(1.1);
+  transition: opacity 0.25s;
+}
+
+.footer-partner-logo:hover { opacity: 1; }
+
+/* FJ logó kicsit kisebb mert más az arány */
+.footer-partner-logo.fj-logo { height: 20px; }
 
 .footer-col h4 {
   font-family: var(--font-display);

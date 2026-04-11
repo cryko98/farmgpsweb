@@ -235,6 +235,13 @@ h1, h2, h3, h4, h5 {
   height: 46px;
   width: auto;
   object-fit: contain;
+  mix-blend-mode: multiply;   /* fekete háttér eltűnik fehér felületen */
+  border-radius: 4px;
+}
+
+/* Footer logónál (sötét háttér) — screen blend mode */
+#footer .logo img {
+  mix-blend-mode: screen;     /* fekete háttér eltűnik sötét felületen */
 }
 
 .logo-text { display: flex; flex-direction: column; line-height: 1.1; }

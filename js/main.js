@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (heroSection) counterObserver.observe(heroSection);
 
   // ==========================================================
-  // CONTACT FORM — Submit handler
+  // CONTACT FORM — FormSubmit AJAX (nincs oldal-átirányítás)
   // ==========================================================
   const form        = document.getElementById('contact-form');
   const formSuccess = document.querySelector('.form-success');
@@ -175,26 +175,40 @@ document.addEventListener('DOMContentLoaded', () => {
   form?.addEventListener('submit', async e => {
     e.preventDefault();
 
-    const submitBtn  = form.querySelector('[type="submit"]');
-    const origHTML   = submitBtn.innerHTML;
+    const submitBtn = form.querySelector('[type="submit"]');
+    const origHTML  = submitBtn.innerHTML;
     submitBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> <span>${LangManager.t('contact_sending')}</span>`;
     submitBtn.disabled = true;
 
-    await new Promise(res => setTimeout(res, 1600));
+    try {
+      const data = new FormData(form);
 
-    form.style.display = 'none';
-    if (formSuccess) {
-      formSuccess.textContent = LangManager.t('contact_success');
-      formSuccess.style.display = 'block';
+      const res = await fetch('https://formsubmit.co/ajax/info@mtzklima.hu', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: data
+      });
+
+      if (res.ok) {
+        form.style.display = 'none';
+        if (formSuccess) {
+          formSuccess.textContent = LangManager.t('contact_success');
+          formSuccess.style.display = 'block';
+        }
+        setTimeout(() => {
+          form.reset();
+          form.style.display = 'block';
+          if (formSuccess) formSuccess.style.display = 'none';
+          submitBtn.innerHTML = origHTML;
+          submitBtn.disabled  = false;
+        }, 5000);
+      } else {
+        throw new Error('Send failed');
+      }
+    } catch {
+      // Fallback: natív form submit ha AJAX nem sikerül
+      form.submit();
     }
-
-    setTimeout(() => {
-      form.reset();
-      form.style.display = 'block';
-      if (formSuccess) formSuccess.style.display = 'none';
-      submitBtn.innerHTML  = origHTML;
-      submitBtn.disabled   = false;
-    }, 5000);
   });
 
   // ==========================================================

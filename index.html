@@ -556,31 +556,43 @@
           </div>
 
           <div class="contact-form-wrap fade-up fade-up-delay-2">
-            <form id="contact-form" novalidate>
+            <form id="contact-form"
+                  action="https://formsubmit.co/info@mtzklima.hu"
+                  method="POST">
+
+              <!-- FormSubmit beállítások -->
+              <input type="hidden" name="_subject"  value="FarmGPS — Új ajánlatkérés érkezett" />
+              <input type="hidden" name="_language" value="hu" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha"  value="false" />
+              <input type="hidden" name="_next"     value="https://farmgps.hu/#contact" />
+              <!-- Spam honeypot -->
+              <input type="text"   name="_honey"    style="display:none" tabindex="-1" autocomplete="off" />
+
               <div class="form-row">
                 <div class="form-group">
-                  <label for="name"  data-i18n="contact_name">Teljes név</label>
-                  <input type="text"  id="name"  name="name"  required autocomplete="name"  placeholder="Pl. Kovács János" />
+                  <label for="name" data-i18n="contact_name">Teljes név</label>
+                  <input type="text" id="name" name="Név" required autocomplete="name" placeholder="Pl. Kovács János" />
                 </div>
                 <div class="form-group">
                   <label for="phone" data-i18n="contact_phone">Telefonszám</label>
-                  <input type="tel"   id="phone" name="phone" autocomplete="tel"   placeholder="+36 XX XXX XXXX" />
+                  <input type="tel" id="phone" name="Telefon" autocomplete="tel" placeholder="+36 XX XXX XXXX" />
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="email"   data-i18n="contact_email">E-mail cím</label>
-                <input type="email"  id="email"   name="email"   required autocomplete="email"  placeholder="pelda@email.hu" />
+                <label for="email" data-i18n="contact_email">E-mail cím</label>
+                <input type="email" id="email" name="Email" required autocomplete="email" placeholder="pelda@email.hu" />
               </div>
 
               <div class="form-group">
                 <label for="tractor" data-i18n="contact_tractor">Traktor típusa / márka</label>
-                <input type="text"   id="tractor" name="tractor" placeholder="Pl. John Deere 6130R" />
+                <input type="text" id="tractor" name="Traktor" placeholder="Pl. John Deere 6130R" />
               </div>
 
               <div class="form-group">
                 <label for="message" data-i18n="contact_message">Üzenet / kérdés</label>
-                <textarea id="message" name="message" rows="4" placeholder="Írja le kérdését vagy kérjen ajánlatot..."></textarea>
+                <textarea id="message" name="Üzenet" rows="4" placeholder="Írja le kérdését vagy kérjen ajánlatot..."></textarea>
               </div>
 
               <button type="submit" class="btn btn-primary btn-block">

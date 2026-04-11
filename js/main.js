@@ -1,5 +1,5 @@
 // ============================================================
-// FarmGPS - Main JavaScript
+// FarmGPS — Main JavaScript
 // File: js/main.js
 // ============================================================
 
@@ -17,178 +17,209 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================
-  // HEADER SCROLL EFFECT
+  // HERO BACKGROUND — Ken Burns zoom-in on load
+  // ==========================================================
+  const heroBg = document.getElementById('hero-bg-img');
+  if (heroBg) {
+    // Small delay lets the CSS transition kick in visibly
+    requestAnimationFrame(() => {
+      setTimeout(() => heroBg.classList.add('loaded'), 80);
+    });
+  }
+
+  // ==========================================================
+  // HEADER — Scroll shadow + shrink
   // ==========================================================
   const header = document.getElementById('header');
 
-  window.addEventListener('scroll', () => {
+  const handleScroll = () => {
     header.classList.toggle('scrolled', window.scrollY > 20);
-  }, { passive: true });
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll(); // run once on load
 
   // ==========================================================
   // MOBILE NAVIGATION
   // ==========================================================
-  const hamburger = document.querySelector('.hamburger');
-  const mobileNav = document.querySelector('.mobile-nav');
+  const hamburger  = document.querySelector('.hamburger');
+  const mobileNav  = document.querySelector('.mobile-nav');
+
+  const closeMobileNav = () => {
+    hamburger.classList.remove('open');
+    mobileNav.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileNav.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
 
   hamburger?.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileNav.classList.toggle('open');
-    document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    const isOpen = mobileNav.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+    mobileNav.setAttribute('aria-hidden', String(!isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
-  // Close mobile nav on link click
   document.querySelectorAll('.mobile-nav a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      mobileNav.classList.remove('open');
-      document.body.style.overflow = '';
-    });
+    link.addEventListener('click', closeMobileNav);
+  });
+
+  // Close on outside click
+  document.addEventListener('click', e => {
+    if (
+      mobileNav.classList.contains('open') &&
+      !mobileNav.contains(e.target) &&
+      !hamburger.contains(e.target)
+    ) {
+      closeMobileNav();
+    }
   });
 
   // ==========================================================
-  // SMOOTH SCROLL FOR ANCHOR LINKS
+  // SMOOTH SCROLL — Anchor links
   // ==========================================================
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
+      const href = anchor.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
+      if (!target) return;
       e.preventDefault();
-      const target = document.querySelector(anchor.getAttribute('href'));
-      if (target) {
-        const offset = 80;
-        const top = target.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top, behavior: 'smooth' });
-      }
+      const headerH = header?.offsetHeight || 70;
+      const top = target.getBoundingClientRect().top + window.scrollY - headerH - 8;
+      window.scrollTo({ top, behavior: 'smooth' });
     });
   });
 
   // ==========================================================
-  // SCROLL ANIMATIONS (Intersection Observer)
+  // ACTIVE NAV LINK — Highlight on scroll
   // ==========================================================
-  const observerOptions = {
-    threshold: 0.12,
-    rootMargin: '0px 0px -50px 0px'
-  };
+  const sections  = Array.from(document.querySelectorAll('section[id]'));
+  const navLinks  = document.querySelectorAll('.nav-links a');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+  const setActive = () => {
+    const scrollY   = window.scrollY;
+    const headerH   = header?.offsetHeight || 70;
+    let current     = '';
+
+    sections.forEach(section => {
+      if (scrollY >= section.offsetTop - headerH - 40) {
+        current = section.id;
       }
     });
-  }, observerOptions);
+
+    navLinks.forEach(link => {
+      const isActive = link.getAttribute('href') === `#${current}`;
+      link.classList.toggle('active', isActive);
+    });
+  };
+
+  window.addEventListener('scroll', setActive, { passive: true });
+  setActive();
+
+  // ==========================================================
+  // SCROLL ANIMATIONS — IntersectionObserver
+  // ==========================================================
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.10, rootMargin: '0px 0px -40px 0px' }
+  );
 
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
   // ==========================================================
-  // CONTACT FORM
+  // COUNTER ANIMATION — Hero stats
   // ==========================================================
-  const form = document.getElementById('contact-form');
+  const animateValue = (el, target, suffix, decimals = 0) => {
+    const duration = 1600;
+    const start    = performance.now();
+    const step = ts => {
+      const progress = Math.min((ts - start) / duration, 1);
+      const eased    = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+      const val      = eased * target;
+      el.textContent = (decimals ? val.toFixed(decimals) : Math.floor(val)) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+
+  const heroSection    = document.querySelector('#hero');
+  const counterDone    = { done: false };
+  const counterObserver = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && !counterDone.done) {
+      counterDone.done = true;
+      const nums = document.querySelectorAll('.hero-stat-num');
+      if (nums[0]) animateValue(nums[0], 20,  '+');
+      if (nums[1]) animateValue(nums[1], 150, '+');
+      if (nums[2]) { nums[2].textContent = '±2,5'; } // static — no animation needed
+      counterObserver.disconnect();
+    }
+  }, { threshold: 0.5 });
+
+  if (heroSection) counterObserver.observe(heroSection);
+
+  // ==========================================================
+  // CONTACT FORM — Submit handler
+  // ==========================================================
+  const form        = document.getElementById('contact-form');
   const formSuccess = document.querySelector('.form-success');
 
-  form?.addEventListener('submit', async (e) => {
+  form?.addEventListener('submit', async e => {
     e.preventDefault();
 
-    const submitBtn = form.querySelector('[type="submit"]');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = LangManager.t('contact_sending');
+    const submitBtn  = form.querySelector('[type="submit"]');
+    const origHTML   = submitBtn.innerHTML;
+    submitBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> <span>${LangManager.t('contact_sending')}</span>`;
     submitBtn.disabled = true;
 
-    // Simulate form submission (replace with real endpoint if needed)
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    await new Promise(res => setTimeout(res, 1600));
 
-    // Show success
     form.style.display = 'none';
     if (formSuccess) {
       formSuccess.textContent = LangManager.t('contact_success');
       formSuccess.style.display = 'block';
     }
 
-    // Reset after 5s
     setTimeout(() => {
       form.reset();
       form.style.display = 'block';
       if (formSuccess) formSuccess.style.display = 'none';
-      submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
+      submitBtn.innerHTML  = origHTML;
+      submitBtn.disabled   = false;
     }, 5000);
   });
 
   // ==========================================================
   // COOKIE BANNER
   // ==========================================================
-  const cookieBanner = document.getElementById('cookie-banner');
-  const cookieAccept = document.getElementById('cookie-accept');
-  const cookieReject = document.getElementById('cookie-reject');
+  const cookieBanner  = document.getElementById('cookie-banner');
+  const cookieAccept  = document.getElementById('cookie-accept');
+  const cookieReject  = document.getElementById('cookie-reject');
 
   if (!localStorage.getItem('farmgps_cookie')) {
-    setTimeout(() => cookieBanner?.classList.add('show'), 1500);
+    setTimeout(() => cookieBanner?.classList.add('show'), 1800);
   }
 
-  cookieAccept?.addEventListener('click', () => {
-    localStorage.setItem('farmgps_cookie', 'accepted');
-    cookieBanner.classList.remove('show');
-  });
+  const hideCookie = val => {
+    localStorage.setItem('farmgps_cookie', val);
+    cookieBanner?.classList.remove('show');
+  };
 
-  cookieReject?.addEventListener('click', () => {
-    localStorage.setItem('farmgps_cookie', 'rejected');
-    cookieBanner.classList.remove('show');
-  });
+  cookieAccept?.addEventListener('click', () => hideCookie('accepted'));
+  cookieReject?.addEventListener('click', () => hideCookie('rejected'));
 
   // ==========================================================
-  // ACTIVE NAV LINK ON SCROLL
+  // FOOTER YEAR
   // ==========================================================
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
-
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-      if (window.scrollY >= section.offsetTop - 120) {
-        current = section.getAttribute('id');
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.style.color = '';
-      link.style.background = '';
-      if (link.getAttribute('href') === `#${current}`) {
-        link.style.color = 'var(--green-700)';
-        link.style.background = 'var(--green-50)';
-      }
-    });
-  }, { passive: true });
-
-  // ==========================================================
-  // COUNTER ANIMATION (Hero stats)
-  // ==========================================================
-  function animateCounter(el, target, suffix = '') {
-    let current = 0;
-    const increment = target / 40;
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= target) {
-        current = target;
-        clearInterval(timer);
-      }
-      el.textContent = Math.floor(current) + suffix;
-    }, 30);
-  }
-
-  // Trigger counters when hero is visible
-  const heroSection = document.querySelector('#hero');
-  const counterObserver = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting) {
-      const counters = document.querySelectorAll('.hero-stat-num');
-      const targets = [20, 150, 2.5];
-      const suffixes = ['+', '+', ''];
-      counters.forEach((c, i) => {
-        animateCounter(c, targets[i], suffixes[i]);
-      });
-      counterObserver.disconnect();
-    }
-  }, { threshold: 0.5 });
-
-  if (heroSection) counterObserver.observe(heroSection);
+  const yearEl = document.getElementById('footer-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 });

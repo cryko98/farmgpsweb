@@ -118,8 +118,8 @@ const translations = {
     contact_phone_label: "Telefon",
     contact_email_label: "E-mail",
     contact_address_label: "Cím",
-    contact_hours_label: "Nyitva",
-    contact_hours_val: "H–P: 8:00–18:00",
+    contact_hours_label: "Nyitvatartás",
+    contact_hours_val: "H–P: 8:00–17:00",
     contact_address_val: "Magyarország",
     contact_privacy: "Az elküldött adatokat kizárólag a megkeresés megválaszolásához használjuk.",
 
@@ -250,7 +250,7 @@ const translations = {
     contact_email_label: "E-mail",
     contact_address_label: "Adresă",
     contact_hours_label: "Program",
-    contact_hours_val: "L–V: 8:00–18:00",
+    contact_hours_val: "L–V: 8:00–17:00",
     contact_address_val: "Ungaria",
     contact_privacy: "Datele trimise sunt utilizate exclusiv pentru răspunsul la solicitare.",
 

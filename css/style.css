@@ -940,51 +940,50 @@ h1, h2, h3, h4, h5 {
 }
 
 .product-card-header {
-  padding: 32px 32px 26px;
-  background: linear-gradient(135deg, var(--green-50), var(--green-100));
+  padding: 28px 28px 22px;
+  background: var(--green-50);
+  border-bottom: 1px solid var(--green-100);
   position: relative;
-  overflow: hidden;
 }
 
-.product-card-header::after {
-  content: '';
-  position: absolute;
-  bottom: -40px; right: -40px;
-  width: 120px; height: 120px;
-  background: radial-gradient(circle, var(--green-200) 0%, transparent 70%);
-  opacity: 0.6;
-}
-
-/* Termék kártya partner logók */
-.product-brand-logo-wrap {
-  height: 44px;
+/* Terméknév + logó egymás mellett */
+.product-card-title-row {
   display: flex;
   align-items: center;
-  margin-bottom: 14px;
+  gap: 12px;
+  margin-bottom: 10px;
 }
 
-/* mix-blend-mode:multiply eltünteti a fekete hátteret a világos card-header alapon */
-.product-brand-logo {
-  height: 38px;
-  width: auto;
-  max-width: 160px;
-  object-fit: contain;
-  mix-blend-mode: multiply;
-  filter: contrast(1.05);
-}
-
-.product-brand-logo.fj { height: 32px; }
-
-.product-card-header h3 {
-  font-size: 1.3rem;
+.product-card-title-row h3 {
+  font-size: 1.2rem;
   color: var(--gray-900);
-  margin-bottom: 9px;
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+
+/* Kis inline logó — mix-blend-mode:multiply eltünteti a fekete hátteret
+   a halvány zöld (--green-50) alapon */
+.product-inline-logo {
+  height: 28px;
+  width: auto;
+  max-width: 90px;
+  object-fit: contain;
+  flex-shrink: 0;
+  mix-blend-mode: multiply;
+  filter: contrast(1.08) saturate(1.05);
+}
+
+/* FJ logó kicsit magasabb arányú — optimális kis mérethez */
+.product-inline-logo--fj {
+  height: 24px;
+  max-width: 80px;
 }
 
 .product-card-header p {
   font-size: 0.875rem;
-  color: var(--gray-600);
+  color: var(--gray-500);
   line-height: 1.68;
+  margin-bottom: 0;
 }
 
 .product-card-body { padding: 26px 32px 30px; }
@@ -1401,20 +1400,19 @@ a.contact-detail-value:hover { color: var(--green-700); }
 
 /* Sötét footer háttéren mix-blend-mode:screen tünteti el a fekete hátteret */
 .footer-partner-logo {
-  height: 24px;
+  height: 18px;
   width: auto;
-  max-width: 110px;
+  max-width: 80px;
   object-fit: contain;
   mix-blend-mode: screen;
-  opacity: 0.75;
-  filter: brightness(1.1);
+  opacity: 0.70;
+  filter: brightness(1.15);
   transition: opacity 0.25s;
 }
 
 .footer-partner-logo:hover { opacity: 1; }
 
-/* FJ logó kicsit kisebb mert más az arány */
-.footer-partner-logo.fj-logo { height: 20px; }
+.footer-partner-logo.fj-logo { height: 15px; max-width: 72px; }
 
 .footer-col h4 {
   font-family: var(--font-display);

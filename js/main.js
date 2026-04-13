@@ -194,9 +194,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <div style="width:64px;height:64px;background:#E8F5E9;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
               <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2D7A2D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-            <h3 style="font-family:'Syne',sans-serif;font-size:1.4rem;color:#111827;margin-bottom:10px;">${LangManager.t('contact_success_title') || 'Köszönjük!'}</h3>
-            <p style="color:#6B7280;font-size:0.95rem;line-height:1.7;">${LangManager.t('contact_success')}</p>
-            <p style="color:#6B7280;font-size:0.9rem;margin-top:8px;">Vígvári Sándor hamarosan felveszi Önnel a kapcsolatot.</p>
+            <h3 style="font-family:'Syne',sans-serif;font-size:1.4rem;color:#111827;margin-bottom:12px;">Köszönjük megkeresését!</h3>
+            <p style="color:#6B7280;font-size:0.95rem;line-height:1.7;max-width:340px;margin:0 auto 8px;">Üzenetét megkaptuk. Vígvári Sándor személyesen fogja átolvasni és <strong style="color:#2D7A2D;">24 órán belül</strong> felveszi Önnel a kapcsolatot.</p>
+            <p style="color:#9CA3AF;font-size:0.82rem;margin-top:16px;">Sürgős esetben: <a href="tel:+36309780784" style="color:#2D7A2D;font-weight:600;">+36 (30) 978 0784</a></p>
           </div>`;
       } else {
         throw new Error('failed');

@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       const data = new FormData(form);
 
-      const res = await fetch('https://formsubmit.co/ajax/info@mtzklima.hu', {
+      const res = await fetch('https://formsubmit.co/ajax/info@farmgps.hu', {
         method: 'POST',
         headers: { 'Accept': 'application/json' },
         body: data

@@ -167,17 +167,45 @@ document.addEventListener('DOMContentLoaded', () => {
   if (heroSection) counterObserver.observe(heroSection);
 
   // ==========================================================
-  // CONTACT FORM — natív FormSubmit (megbízható email küldés)
+  // CONTACT FORM — AJAX, nincs átirányítás
   // ==========================================================
   const form        = document.getElementById('contact-form');
-  const formSuccess = document.querySelector('.form-success');
+  const formWrap    = document.querySelector('.contact-form-wrap');
 
-  form?.addEventListener('submit', e => {
-    // Nem állítjuk meg a natív submit-ot — FormSubmit kezeli
+  form?.addEventListener('submit', async e => {
+    e.preventDefault();
+
     const submitBtn = form.querySelector('[type="submit"]');
+    const origHTML  = submitBtn.innerHTML;
     submitBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> <span>${LangManager.t('contact_sending')}</span>`;
     submitBtn.disabled = true;
-    // A FormSubmit átveszi, elküldi az emailt, majd visszairányít a _next URL-re
+
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/3710c2ac83ccd163d0858966507613d2', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+
+      if (res.ok) {
+        // Sikerüzenet megjelenítése az oldalon belül
+        formWrap.innerHTML = `
+          <div style="text-align:center; padding: 48px 24px;">
+            <div style="width:64px;height:64px;background:#E8F5E9;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2D7A2D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3 style="font-family:'Syne',sans-serif;font-size:1.4rem;color:#111827;margin-bottom:10px;">${LangManager.t('contact_success_title') || 'Köszönjük!'}</h3>
+            <p style="color:#6B7280;font-size:0.95rem;line-height:1.7;">${LangManager.t('contact_success')}</p>
+            <p style="color:#6B7280;font-size:0.9rem;margin-top:8px;">Vígvári Sándor hamarosan felveszi Önnel a kapcsolatot.</p>
+          </div>`;
+      } else {
+        throw new Error('failed');
+      }
+    } catch {
+      submitBtn.innerHTML = origHTML;
+      submitBtn.disabled  = false;
+      alert('Hiba történt. Kérjük hívjon minket: +36 (30) 978 0784');
+    }
   });
 
   // ==========================================================

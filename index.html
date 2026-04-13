@@ -251,11 +251,15 @@
     <div class="about-inner">
       <div class="about-visual fade-up">
         <div class="about-image-frame">
-          <div class="about-image-placeholder">
+          <img src="images/vigvari.png"
+               alt="Vígvári Sándor"
+               class="about-photo"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="about-image-placeholder" style="display:none;">
             <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="var(--green-300)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
             </svg>
-            <p>Vígvári Sándor fotója<br/><small>(kép feltöltése ajánlott)</small></p>
+            <p>Vígvári Sándor fotója<br/><small>(kép feltöltése: images/vigvari.png)</small></p>
           </div>
         </div>
         <div class="about-accent-card">
@@ -356,6 +360,7 @@
       <!-- Hi-Target -->
       <article class="product-card fade-up fade-up-delay-1">
         <div class="product-card-header">
+          <img src="images/hitarget-product.jpg" alt="Hi-Target robotkormány rendszer" class="product-card-img" />
           <div class="product-card-title-row">
             <img src="images/hi-target.png" alt="Hi-Target" class="product-inline-logo" />
             <h3 data-i18n="prod_hitarget_title">Hi-Target Robotkormány</h3>
@@ -380,6 +385,7 @@
       <!-- FJ Dynamics -->
       <article class="product-card fade-up fade-up-delay-2">
         <div class="product-card-header">
+          <img src="images/fj-product.jpg" alt="FJ Dynamics AT2 robotkormány" class="product-card-img" />
           <div class="product-card-title-row">
             <img src="images/fj.png" alt="FJ Dynamics" class="product-inline-logo product-inline-logo--fj" />
             <h3 data-i18n="prod_fjdynamics_title">FJ Dynamics Robotkormány</h3>

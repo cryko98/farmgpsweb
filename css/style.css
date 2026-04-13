@@ -756,12 +756,13 @@ h1, h2, h3, h4, h5 {
 /* Product card image — full width banner at top */
 .product-card-img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
-  object-position: center;
+  object-position: center 40%;
   display: block;
   border-radius: 0;
   margin-bottom: 18px;
+  background: var(--gray-100);
 }
 
 /* Title row and description below image */

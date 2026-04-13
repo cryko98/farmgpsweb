@@ -167,48 +167,17 @@ document.addEventListener('DOMContentLoaded', () => {
   if (heroSection) counterObserver.observe(heroSection);
 
   // ==========================================================
-  // CONTACT FORM — FormSubmit AJAX (nincs oldal-átirányítás)
+  // CONTACT FORM — natív FormSubmit (megbízható email küldés)
   // ==========================================================
   const form        = document.getElementById('contact-form');
   const formSuccess = document.querySelector('.form-success');
 
-  form?.addEventListener('submit', async e => {
-    e.preventDefault();
-
+  form?.addEventListener('submit', e => {
+    // Nem állítjuk meg a natív submit-ot — FormSubmit kezeli
     const submitBtn = form.querySelector('[type="submit"]');
-    const origHTML  = submitBtn.innerHTML;
     submitBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> <span>${LangManager.t('contact_sending')}</span>`;
     submitBtn.disabled = true;
-
-    try {
-      const data = new FormData(form);
-
-      const res = await fetch('https://formsubmit.co/ajax/info@farmgps.hu', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: data
-      });
-
-      if (res.ok) {
-        form.style.display = 'none';
-        if (formSuccess) {
-          formSuccess.textContent = LangManager.t('contact_success');
-          formSuccess.style.display = 'block';
-        }
-        setTimeout(() => {
-          form.reset();
-          form.style.display = 'block';
-          if (formSuccess) formSuccess.style.display = 'none';
-          submitBtn.innerHTML = origHTML;
-          submitBtn.disabled  = false;
-        }, 5000);
-      } else {
-        throw new Error('Send failed');
-      }
-    } catch {
-      // Fallback: natív form submit ha AJAX nem sikerül
-      form.submit();
-    }
+    // A FormSubmit átveszi, elküldi az emailt, majd visszairányít a _next URL-re
   });
 
   // ==========================================================

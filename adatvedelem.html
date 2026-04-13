@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Adatvédelmi Tájékoztató — FarmGPS</title>
+  <link rel="icon" type="image/png" href="images/fgpslogo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green-700: #2D7A2D;
+      --green-100: #E8F5E9;
+      --gray-50:  #F9FAFB;
+      --gray-100: #F3F4F6;
+      --gray-200: #E5E7EB;
+      --gray-500: #6B7280;
+      --gray-700: #374151;
+      --gray-900: #111827;
+    }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: 'DM Sans', sans-serif; color: var(--gray-700); background: #fff; line-height: 1.7; }
+
+    /* Header */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--gray-100);
+      padding: 0 clamp(16px, 4vw, 40px);
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    }
+    .site-header .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .site-header .logo img {
+      height: 38px;
+      mix-blend-mode: multiply;
+    }
+    .site-header .logo-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--green-700);
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--green-700);
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 7px 14px;
+      border-radius: 50px;
+      border: 1.5px solid var(--green-700);
+      transition: all 0.2s;
+    }
+    .back-btn:hover { background: var(--green-700); color: #fff; }
+
+    /* Content */
+    .page-hero {
+      background: linear-gradient(135deg, #1a4a1a, #2D7A2D);
+      padding: clamp(40px, 6vw, 72px) clamp(16px, 4vw, 40px);
+      text-align: center;
+    }
+    .page-hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .page-hero p {
+      color: rgba(255,255,255,0.72);
+      font-size: 0.95rem;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: clamp(32px, 6vw, 64px) clamp(16px, 4vw, 40px);
+    }
+
+    .section { margin-bottom: 40px; }
+    .section h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--green-100);
+    }
+    .section p { margin-bottom: 12px; font-size: 0.95rem; color: var(--gray-700); }
+    .section ul { padding-left: 20px; margin-bottom: 12px; }
+    .section ul li { font-size: 0.95rem; color: var(--gray-700); margin-bottom: 6px; }
+    .section a { color: var(--green-700); }
+
+    .info-box {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 32px;
+      font-size: 0.90rem;
+    }
+    .info-box strong { color: var(--gray-900); }
+
+    footer {
+      background: var(--gray-900);
+      color: #9CA3AF;
+      text-align: center;
+      padding: 24px 16px;
+      font-size: 0.80rem;
+    }
+    footer a { color: #4CAF50; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="logo">
+    <img src="images/fgpslogo.png" alt="FarmGPS" />
+    <span class="logo-name">FarmGPS</span>
+  </a>
+  <a href="index.html" class="back-btn">
+    ← Főoldal
+  </a>
+</header>
+
+<div class="page-hero">
+  <h1>Adatvédelmi Tájékoztató</h1>
+  <p>Utoljára frissítve: 2025. január 1.</p>
+</div>
+
+<div class="content">
+
+  <div class="info-box">
+    <strong>Adatkezelő:</strong> SUGÁR-KER 2002 Kereskedelmi és Szolgáltató Betéti Társaság<br/>
+    <strong>Tulajdonos:</strong> Vígvári Sándor<br/>
+    <strong>Email:</strong> <a href="mailto:info@farmgps.hu">info@farmgps.hu</a><br/>
+    <strong>Telefon:</strong> <a href="tel:+36309780784">+36 (30) 978 0784</a>
+  </div>
+
+  <div class="section">
+    <h2>1. Az adatkezelés célja</h2>
+    <p>A FarmGPS weboldal (farmgps.hu) üzemeltetője a SUGÁR-KER 2002 Bt. Az alábbi tájékoztató ismerteti, hogy milyen személyes adatokat gyűjtünk, azokat hogyan használjuk fel, és milyen jogok illetik meg Önt.</p>
+    <p>Személyes adatait kizárólag az alábbi célokra kezeljük:</p>
+    <ul>
+      <li>Ajánlatkérések fogadása és megválaszolása</li>
+      <li>Üzleti kapcsolattartás</li>
+      <li>Szolgáltatásaink nyújtása</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>2. Kezelt adatok köre</h2>
+    <p>Az ajánlatkérő űrlap kitöltésekor az alábbi adatokat kérjük:</p>
+    <ul>
+      <li>Teljes név (kötelező)</li>
+      <li>E-mail cím (kötelező)</li>
+      <li>Telefonszám (nem kötelező)</li>
+      <li>Traktor típusa / márka (nem kötelező)</li>
+      <li>Üzenet szövege (nem kötelező)</li>
+    </ul>
+    <p>Weboldalunkon automatikusan rögzíthetjük a látogatás időpontját és az IP-címet a biztonsági naplózás céljából.</p>
+  </div>
+
+  <div class="section">
+    <h2>3. Az adatkezelés jogalapja</h2>
+    <p>Az adatkezelés jogalapja az Ön önkéntes hozzájárulása (GDPR 6. cikk (1) bekezdés a) pont), amelyet az ajánlatkérő űrlap beküldésével ad meg.</p>
+  </div>
+
+  <div class="section">
+    <h2>4. Adatmegőrzési idő</h2>
+    <p>A beküldött adatokat az üzleti kapcsolat fennállásáig, de legfeljebb 5 évig őrizzük meg. Ön bármikor kérheti adatai törlését.</p>
+  </div>
+
+  <div class="section">
+    <h2>5. Adattovábbítás</h2>
+    <p>Személyes adatait harmadik félnek nem adjuk át, kivéve:</p>
+    <ul>
+      <li>Ha jogszabály kötelez erre</li>
+      <li>Az ajánlatkérés feldolgozásához igénybevett szolgáltatók (pl. email-szolgáltatás) — kizárólag az adatkezelési cél teljesítéséhez szükséges mértékben</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>6. Az Ön jogai</h2>
+    <p>A GDPR alapján Önt az alábbi jogok illetik meg:</p>
+    <ul>
+      <li><strong>Hozzáférés joga:</strong> tájékoztatást kérhet kezelt adatairól</li>
+      <li><strong>Helyesbítés joga:</strong> kérheti pontatlan adatai javítását</li>
+      <li><strong>Törlés joga:</strong> kérheti adatai törlését ("elfeledtetéshez való jog")</li>
+      <li><strong>Tiltakozás joga:</strong> tiltakozhat adatai kezelése ellen</li>
+      <li><strong>Adathordozhatóság joga:</strong> kérheti adatai strukturált formában való kiadását</li>
+    </ul>
+    <p>Jogai gyakorlásához írjon az <a href="mailto:info@farmgps.hu">info@farmgps.hu</a> címre.</p>
+  </div>
+
+  <div class="section">
+    <h2>7. Sütik (cookie-k)</h2>
+    <p>Weboldalunk sütiket (cookie-kat) használ a jobb felhasználói élmény érdekében. A sütikről részletesen a Cookie beállítások menüpontban tájékozódhat. A sütiket bármikor visszavonhatja a böngésző beállításaiban.</p>
+  </div>
+
+  <div class="section">
+    <h2>8. Jogorvoslat</h2>
+    <p>Ha úgy véli, hogy adatainak kezelése sérti a GDPR-t, panaszt tehet a Nemzeti Adatvédelmi és Információszabadság Hatóságnál (NAIH):</p>
+    <ul>
+      <li>Weboldal: <a href="https://www.naih.hu" target="_blank" rel="noopener">www.naih.hu</a></li>
+      <li>Postacím: 1363 Budapest, Pf. 9.</li>
+      <li>Email: ugyfelszolgalat@naih.hu</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; <script>document.write(new Date().getFullYear())</script> SUGÁR-KER 2002 Bt. — <a href="index.html">Vissza a főoldalra</a></p>
+</footer>
+
+</body>
+</html>

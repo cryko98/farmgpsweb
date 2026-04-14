@@ -123,6 +123,15 @@ const translations = {
     contact_address_val: "Magyarország",
     contact_privacy: "Az elküldött adatokat kizárólag a megkeresés megválaszolásához használjuk.",
 
+    // Product Features
+    pf_badge:      "Termékeink részletesen",
+    pf_title:      "Ismerje meg rendszereinket",
+    pf_ht1_title:  "Intuitív All-in-One dizájn",
+    pf_ht1_desc:   "Egyszerűsítsen minden feladatot az integrált navigációval, valós idejű monitoringgal és egy 30+ országban tesztelt, helyi nyelveket támogató kezelőfelülettel — csökkentve a bonyolultságot és a kezelői fáradtságot.",
+    pf_ht2_title:  "Felhőalapú farmmenedzsment",
+    pf_ht2_desc:   "Szinkronizálja a táblaadatokat zökkenőmentesen az eszközök között, kövesse nyomon a feladatokat valós időben, és optimalizálja az erőforrás-felhasználást azonnali betekintéssel a táblákra, gépekre és határokra.",
+    pf_fj_soon:    "Hamarosan — további termékképek és részletes leírás érkezik az FJ Dynamics AT2 rendszerről.",
+
     // Footer
     footer_tagline: "Precíziós GPS robotkormány rendszerek — Magyarország és környező országok",
     footer_links: "Gyors linkek",
@@ -253,6 +262,15 @@ const translations = {
     contact_hours_val: "L–V: 8:00–17:00",
     contact_address_val: "Ungaria",
     contact_privacy: "Datele trimise sunt utilizate exclusiv pentru răspunsul la solicitare.",
+
+    // Product Features
+    pf_badge:      "Produsele noastre în detaliu",
+    pf_title:      "Descoperiți sistemele noastre",
+    pf_ht1_title:  "Design intuitiv All-in-One",
+    pf_ht1_desc:   "Simplificați fiecare sarcină cu navigare integrată, monitorizare în timp real și o interfață testată în 30+ țări cu limbi locale — reducând complexitatea și oboseala operatorului.",
+    pf_ht2_title:  "Management agricol bazat pe cloud",
+    pf_ht2_desc:   "Sincronizați datele câmpului fără efort între dispozitive, monitorizați sarcinile în timp real și optimizați alocarea resurselor cu informații instantanee despre parcele, utilaje și limite.",
+    pf_fj_soon:    "În curând — imagini suplimentare și descriere detaliată a sistemului FJ Dynamics AT2.",
 
     // Footer
     footer_tagline: "Sisteme GPS de pilotaj automat de precizie — Ungaria și țările vecine",

@@ -374,33 +374,34 @@ h1, h2, h3, h4, h5 {
   inset: 0;
   background-image: url('../images/hero.webp');
   background-size: cover;
-  background-position: center 60%;
+  background-position: 65% 45%;
   background-repeat: no-repeat;
   transform: scale(1.04);
-  transition: transform 8s ease-out;
+  transition: transform 10s ease-out;
   will-change: transform;
 }
 .hero-bg-img.loaded { transform: scale(1); }
 
-/* Dark gradient overlay — heavier on mobile for legibility */
+/* Dark gradient overlay — erős bal oldalon (szöveg), átlátszó jobb oldalon (traktor látszik) */
 .hero-bg-pattern {
   position: absolute;
   inset: 0;
   z-index: 1;
   background: linear-gradient(
-    105deg,
-    rgba(12, 35, 12, 0.88) 0%,
-    rgba(18, 48, 18, 0.74) 42%,
-    rgba(22, 55, 22, 0.40) 68%,
-    rgba(10, 28, 10, 0.18) 100%
+    100deg,
+    rgba(8, 26, 8, 0.92) 0%,
+    rgba(12, 38, 12, 0.78) 35%,
+    rgba(15, 44, 15, 0.45) 58%,
+    rgba(10, 30, 10, 0.15) 78%,
+    rgba(5, 18, 5, 0.08) 100%
   );
 }
 .hero-bg-pattern::after {
   content: '';
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: 160px;
-  background: linear-gradient(to top, rgba(0,0,0,0.32), transparent);
+  height: 180px;
+  background: linear-gradient(to top, rgba(0,0,0,0.38), transparent);
 }
 
 /* Subtle grid */
@@ -1466,9 +1467,9 @@ a.contact-detail-value:hover { color: var(--green-700); }
   .hero-bg-pattern {
     background: linear-gradient(
       to bottom,
-      rgba(8, 24, 8, 0.88) 0%,
-      rgba(10, 30, 10, 0.78) 50%,
-      rgba(8, 22, 8, 0.68) 100%
+      rgba(6, 20, 6, 0.92) 0%,
+      rgba(8, 26, 8, 0.82) 50%,
+      rgba(6, 20, 6, 0.68) 100%
     );
   }
 

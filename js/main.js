@@ -135,6 +135,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
+  // Slide-in animációk (product features szekció)
+  const slideObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          slideObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -30px 0px' }
+  );
+
+  document.querySelectorAll('.slide-in-left, .slide-in-right').forEach(el => slideObserver.observe(el));
+
   // ==========================================================
   // COUNTER ANIMATION — Hero stats
   // ==========================================================

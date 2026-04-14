@@ -131,6 +131,14 @@ const translations = {
     pf_ht2_title:  "Felhőalapú farmmenedzsment",
     pf_ht2_desc:   "Szinkronizálja a táblaadatokat zökkenőmentesen az eszközök között, kövesse nyomon a feladatokat valós időben, és optimalizálja az erőforrás-felhasználást azonnali betekintéssel a táblákra, gépekre és határokra.",
     pf_fj_soon:    "Hamarosan — további termékképek és részletes leírás érkezik az FJ Dynamics AT2 rendszerről.",
+    pf_fj1_title:  "Talajmunkák",
+    pf_fj1_desc:   "Az FJD több automata kormányzási rendszert kínál talajmunkákhoz. Az AT2 Max, AT2 és AS2 automatikusan vezeti a traktort kultivátorokhoz és boronákhoz, míg az AL02 GPS-adatokat használ a 3D tereprendezéshez a hatékonyabb vízgazdálkodás érdekében.",
+    pf_fj2_title:  "Vetés",
+    pf_fj2_desc:   "Az FJD automata kormányzási rendszerei tökéletesen egyenes sorokban irányítják az ültetőgépeket és vetőgépeket a pontos vetéshez. Ez minden értékes magot megőriz és javítja a jövőbeli terméseredményt.",
+    pf_fj3_title:  "Permetezés",
+    pf_fj3_desc:   "Az FJD rugalmas megoldásokat kínál a precíziós permetezéshez. ISOBUS-os modellekkel az AT2 Max, AT2 és AH2 valós időben automatikusan vezérli a szakaszokat és az áramlási sebességet — minden csepp számít, megvédve az erőforrásokat és a környezetet.",
+    pf_fj4_title:  "Betakarítás",
+    pf_fj4_desc:   "Az FJD automata kormányzási rendszerei pontossá és hatékonnyá teszik a betakarítást, még dombos területeken is. Az AT2 Max, AT2, AH2 Max és AS2 Max rendszereket gabonafélék és takarmánynövények betakarítására is sikerrel alkalmazzák.",
 
     // Footer
     footer_tagline: "Precíziós GPS robotkormány rendszerek — Magyarország és környező országok",
@@ -271,6 +279,14 @@ const translations = {
     pf_ht2_title:  "Management agricol bazat pe cloud",
     pf_ht2_desc:   "Sincronizați datele câmpului fără efort între dispozitive, monitorizați sarcinile în timp real și optimizați alocarea resurselor cu informații instantanee despre parcele, utilaje și limite.",
     pf_fj_soon:    "În curând — imagini suplimentare și descriere detaliată a sistemului FJ Dynamics AT2.",
+    pf_fj1_title:  "Pregătirea terenului",
+    pf_fj1_desc:   "FJD oferă mai multe sisteme de ghidare automată pentru lucrările de teren. AT2 Max, AT2 și AS2 ghidează automat tractorul la cultivatoare și grape, în timp ce AL02 utilizează date GPS pentru nivelarea 3D a terenului în scopul unui management eficient al apei.",
+    pf_fj2_title:  "Semănat",
+    pf_fj2_desc:   "Sistemele de ghidare automată FJD ghidează semănătorile în rânduri perfect drepte pentru o semănare precisă. Aceasta economisește fiecare sămânță valoroasă și îmbunătățește producția viitoare.",
+    pf_fj3_title:  "Stropit",
+    pf_fj3_desc:   "FJD oferă soluții flexibile pentru stropitul de precizie. Cu modele compatibile ISOBUS, AT2 Max, AT2 și AH2 controlează automat secțiunile și debitul în timp real — fiecare picătură contează, protejând resursele și mediul.",
+    pf_fj4_title:  "Recoltare",
+    pf_fj4_desc:   "Sistemele de ghidare automată FJD fac recoltarea precisă și eficientă, chiar și pe teren accidentat. Sistemele AT2 Max, AT2, AH2 Max și AS2 Max au fost utilizate pentru recoltarea cerealelor și a furajelor.",
 
     // Footer
     footer_tagline: "Sisteme GPS de pilotaj automat de precizie — Ungaria și țările vecine",

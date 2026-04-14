@@ -26,6 +26,7 @@ const translations = {
     hero_stat_1: "Év tapasztalat",
     hero_stat_2: "Beépített rendszer",
     hero_stat_3: "cm RTK pontosság",
+    hero_partners_label: "Hivatalos forgalmazó",
 
     // About
     about_badge: "Rólunk",
@@ -183,6 +184,7 @@ const translations = {
     hero_stat_1: "Ani de experiență",
     hero_stat_2: "Sisteme montate",
     hero_stat_3: "cm precizie RTK",
+    hero_partners_label: "Distribuitor oficial",
 
     // About
     about_badge: "Despre noi",

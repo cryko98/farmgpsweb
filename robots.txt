@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap helye
+Sitemap: https://www.farmgps.hu/sitemap.xml
+
+# Köszönjük oldalt ne indexelje
+Disallow: /koszonjuk.html

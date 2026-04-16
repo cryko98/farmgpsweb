@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Főoldal -->
+  <url>
+    <loc>https://www.farmgps.hu/</loc>
+    <lastmod>2025-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.farmgps.hu/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.farmgps.hu/"/>
+  </url>
+
+  <!-- Adatvédelmi tájékoztató -->
+  <url>
+    <loc>https://www.farmgps.hu/adatvedelem.html</loc>
+    <lastmod>2025-04-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Általános feltételek -->
+  <url>
+    <loc>https://www.farmgps.hu/altalanos-feltetelek.html</loc>
+    <lastmod>2025-04-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Köszönjük oldal -->
+  <url>
+    <loc>https://www.farmgps.hu/koszonjuk.html</loc>
+    <lastmod>2025-04-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+  </url>
+
+</urlset>

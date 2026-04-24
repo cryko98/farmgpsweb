@@ -637,26 +637,43 @@ h1, h2, h3, h4, h5 {
    ============================================================ */
 #about { padding: var(--section-padding) 0; background: var(--white); }
 
+/* Cím középen felül */
+.about-header {
+  text-align: center;
+  margin-bottom: 44px;
+}
+.about-header .section-badge { margin-bottom: 12px; }
+.about-header .section-title { max-width: 700px; margin: 0 auto; }
+
+/* Kétoszlopos: bal fotó (kisebb), jobb szöveg */
 .about-inner {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 64px;
-  align-items: center;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+  align-items: start;
 }
-.about-visual { position: relative; }
+
+/* Bal: fotó + stat + mini badge-ek */
+.about-visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
 .about-image-frame {
   position: relative;
   border-radius: var(--radius-xl);
   overflow: hidden;
   background: linear-gradient(135deg, var(--green-100), var(--green-50));
-  aspect-ratio: 4/5;
-  max-height: 440px;
+  aspect-ratio: 3/4;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: var(--shadow-md);
 }
 
-/* Actual photo — covers frame */
 .about-photo {
   width: 100%;
   height: 100%;
@@ -666,49 +683,75 @@ h1, h2, h3, h4, h5 {
 }
 
 .about-image-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 13px; }
-.about-image-placeholder svg   { opacity: 0.30; }
-.about-image-placeholder p     { font-size: 0.80rem; color: var(--gray-400); text-align: center; padding: 0 20px; line-height: 1.5; }
-.about-image-placeholder small { color: var(--gray-300); font-size: 0.70rem; }
+.about-image-placeholder svg { opacity: 0.30; }
 
+/* 20+ kártya */
 .about-accent-card {
-  position: absolute;
-  bottom: -18px; right: -18px;
   background: var(--green-700);
   color: white;
-  padding: 16px 20px;
+  padding: 14px 18px;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-green);
+  text-align: center;
 }
-.about-accent-card .acc-num   { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; line-height: 1; }
-.about-accent-card .acc-label { font-size: 0.70rem; opacity: 0.82; margin-top: 3px; }
+.about-accent-card .acc-num   { font-family: var(--font-display); font-size: 1.7rem; font-weight: 800; line-height: 1; }
+.about-accent-card .acc-label { font-size: 0.68rem; opacity: 0.82; margin-top: 3px; }
 
-.about-text p { color: var(--gray-600); line-height: 1.82; margin-bottom: 14px; font-size: 0.95rem; }
-.about-text p:last-child { margin-bottom: 0; }
-
-.about-badges { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 24px; }
-.about-badge-item {
+/* Mini badge-ek a fotó alatt */
+.about-mini-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.about-mini-badge {
   display: flex;
   align-items: center;
-  gap: 9px;
-  padding: 12px 14px;
+  gap: 8px;
+  padding: 9px 12px;
   background: var(--green-50);
-  border-radius: var(--radius-md);
   border: 1px solid var(--green-100);
+  border-radius: var(--radius-md);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--green-800);
   transition: var(--transition);
 }
-.about-badge-item:hover { background: var(--green-100); border-color: var(--green-300); }
-.about-badge-icon {
-  width: 32px; height: 32px;
-  background: var(--green-100);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--green-700);
-  flex-shrink: 0;
+.about-mini-badge:hover { background: var(--green-100); border-color: var(--green-300); }
+.about-mini-badge svg { color: var(--green-700); flex-shrink: 0; }
+
+/* Jobb: szöveg */
+.about-content { display: flex; flex-direction: column; gap: 0; }
+.about-text p { color: var(--gray-600); line-height: 1.80; margin-bottom: 13px; font-size: 0.95rem; }
+.about-text p:last-child { margin-bottom: 0; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-inner {
+    grid-template-columns: 220px 1fr;
+    gap: 32px;
+  }
 }
-.about-badge-item:hover .about-badge-icon { background: var(--green-200); }
-.about-badge-text { font-size: 0.78rem; font-weight: 600; color: var(--green-800); line-height: 1.3; }
+
+@media (max-width: 680px) {
+  .about-inner {
+    grid-template-columns: 1fr;
+  }
+  .about-visual {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .about-image-frame {
+    width: 140px;
+    aspect-ratio: 3/4;
+    flex-shrink: 0;
+  }
+  .about-accent-card { flex: 1; min-width: 100px; }
+  .about-mini-badges { flex: 1 1 100%; flex-direction: row; flex-wrap: wrap; }
+  .about-mini-badge  { flex: 1 1 calc(50% - 4px); }
+}
+
 
 /* ============================================================
    SERVICES
@@ -1400,9 +1443,6 @@ a.contact-detail-value:hover { color: var(--green-700); }
   .hero-content           { max-width: 100%; }
   .hero-subtitle          { max-width: 100%; }
 
-  .about-inner            { grid-template-columns: 1fr; gap: 32px; }
-  .about-visual           { display: none; }
-  .about-badges           { grid-template-columns: repeat(2, 1fr); }
 
   .services-grid          { grid-template-columns: repeat(2, 1fr); }
   .why-grid               { grid-template-columns: repeat(2, 1fr); }
@@ -1500,7 +1540,6 @@ a.contact-detail-value:hover { color: var(--green-700); }
   .products-grid          { grid-template-columns: 1fr; }
   .why-grid               { grid-template-columns: 1fr; }
   .references-grid        { grid-template-columns: 1fr; }
-  .about-badges           { grid-template-columns: 1fr; }
   .form-row               { grid-template-columns: 1fr; }
   .contact-form-wrap      { padding: 20px 16px; }
   .footer-inner           { grid-template-columns: 1fr; gap: 24px; }

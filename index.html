@@ -270,7 +270,17 @@
      ============================================================ -->
 <section id="about" aria-label="Rólunk">
   <div class="container">
+
+    <!-- Felső sor: badge + cím középen -->
+    <div class="about-header fade-up">
+      <span class="section-badge" data-i18n="about_badge">Rólunk</span>
+      <h2 class="section-title" data-i18n="about_title">Vígvári Sándor – Gépészmérnök — több mint egy évtized tapasztalattal</h2>
+    </div>
+
+    <!-- Fotó kártya + szöveg -->
     <div class="about-inner">
+
+      <!-- Bal: fotó kártya -->
       <div class="about-visual fade-up">
         <div class="about-image-frame">
           <img src="images/vigvari.png"
@@ -281,26 +291,39 @@
             <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="var(--green-300)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
             </svg>
-            <p>Vígvári Sándor fotója<br/><small>(kép feltöltése: images/vigvari.png)</small></p>
           </div>
         </div>
+        <!-- Stat badge -->
         <div class="about-accent-card">
           <div class="acc-num">20+</div>
           <div class="acc-label" data-i18n="about_exp">Év tapasztalat</div>
         </div>
+        <!-- Mini badge-ek a fotó alatt -->
+        <div class="about-mini-badges">
+          <div class="about-mini-badge">
+            <svg width="14" height="14"><use href="#ic-award"/></svg>
+            <span data-i18n="about_certified">Hivatalos forgalmazó</span>
+          </div>
+          <div class="about-mini-badge">
+            <svg width="14" height="14"><use href="#ic-map"/></svg>
+            <span>Magyarország &amp; Románia</span>
+          </div>
+          <div class="about-mini-badge">
+            <svg width="14" height="14"><use href="#ic-shield"/></svg>
+            <span data-i18n="about_guarantee">Garancia &amp; szerviz</span>
+          </div>
+        </div>
       </div>
 
+      <!-- Jobb: szöveg -->
       <div class="about-content">
-        <span class="section-badge fade-up" data-i18n="about_badge">Rólunk</span>
-        <h2 class="section-title fade-up fade-up-delay-1" data-i18n="about_title">Vígvári Sándor – Gépészmérnök,<br>több mint egy évtized tapasztalattal</h2>
         <div class="about-text">
-          <p class="fade-up fade-up-delay-2" data-i18n="about_p1">Gépészmérnökként 2008 óta foglalkozom traktorok klímarendszereivel és autóvillamosságával. A mindennapi munkám során pontosan látom, milyen problémákkal találkoznak a gazdálkodók a szántóföldön, és hogy mennyire fontos a megbízható, pontos működés.</p>
-          <p class="fade-up fade-up-delay-3" data-i18n="about_p2">A robotkormány rendszerekkel azért kezdtem el foglalkozni, mert egy jól beállított rendszer nemcsak kényelmesebbé teszi a munkát, hanem jelentős üzemanyag- és időmegtakarítást is eredményez.</p>
-          <p class="fade-up fade-up-delay-4" data-i18n="about_p3">A FarmGPS mögött nem egy webshop, hanem valódi gyakorlati tapasztalat áll. Nálunk nem csak értékesítjük a rendszereket, hanem saját kezűleg szereljük és állítjuk be azokat — így biztos lehet benne, hogy a robotkormány pontosan és megbízhatóan fog működni az Ön traktorában.</p>
-          <p class="fade-up fade-up-delay-4" data-i18n="about_p4">Hivatalos magyarországi forgalmazói kapcsolatban állunk a Hi-Target márkával, és az FJ Dynamics robotkormány rendszereket is több éve sikeresen forgalmazzuk és telepítjük. Magyarország teljes területén, valamint Romániában is rendelkezünk elégedett ügyfelekkel. A szakmai hátteret a SUGÁR-KER 2002 Bt. és az ismert MTZKlíma tevékenység adja.</p>
+          <p class="fade-up fade-up-delay-1" data-i18n="about_p1">Gépészmérnökként 2008 óta foglalkozom traktorok klímarendszereivel és autóvillamosságával. A mindennapi munkám során pontosan látom, milyen problémákkal találkoznak a gazdálkodók a szántóföldön, és hogy mennyire fontos a megbízható, pontos működés.</p>
+          <p class="fade-up fade-up-delay-2" data-i18n="about_p2">A robotkormány rendszerekkel azért kezdtem el foglalkozni, mert egy jól beállított rendszer nemcsak kényelmesebbé teszi a munkát, hanem jelentős üzemanyag- és időmegtakarítást is eredményez.</p>
+          <p class="fade-up fade-up-delay-3" data-i18n="about_p3">A FarmGPS mögött nem egy webshop, hanem valódi gyakorlati tapasztalat áll. Nálunk nem csak értékesítjük a rendszereket, hanem saját kezűleg szereljük és állítjuk be azokat — így biztos lehet benne, hogy a robotkormány pontosan és megbízhatóan fog működni az Ön traktorában.</p>
+          <p class="fade-up fade-up-delay-3" data-i18n="about_p4">Hivatalos magyarországi forgalmazói kapcsolatban állunk a Hi-Target márkával, és az FJ Dynamics robotkormány rendszereket is több éve sikeresen forgalmazzuk és telepítjük. Magyarország teljes területén, valamint Romániában is rendelkezünk elégedett ügyfelekkel. A szakmai hátteret a SUGÁR-KER 2002 Bt. és az ismert MTZKlíma tevékenység adja.</p>
         </div>
 
-        <!-- Amit a FarmGPS-nél kap -->
         <div class="about-checklist fade-up fade-up-delay-4">
           <div class="about-checklist-title" data-i18n="about_checklist_title">Amit a FarmGPS-nél kap:</div>
           <ul class="about-checklist-list">
@@ -311,25 +334,9 @@
           </ul>
         </div>
 
-        <div class="about-badges">
-          <div class="about-badge-item fade-up fade-up-delay-1">
-            <div class="about-badge-icon" aria-hidden="true"><svg width="17" height="17"><use href="#ic-award"/></svg></div>
-            <span class="about-badge-text" data-i18n="about_certified">Hivatalos forgalmazó</span>
-          </div>
-          <div class="about-badge-item fade-up fade-up-delay-2">
-            <div class="about-badge-icon" aria-hidden="true"><svg width="17" height="17"><use href="#ic-satellite"/></svg></div>
-            <span class="about-badge-text">Hi-Target &amp; FJ Dynamics</span>
-          </div>
-          <div class="about-badge-item fade-up fade-up-delay-3">
-            <div class="about-badge-icon" aria-hidden="true"><svg width="17" height="17"><use href="#ic-shield"/></svg></div>
-            <span class="about-badge-text" data-i18n="about_guarantee">Garancia &amp; szerviz</span>
-          </div>
-          <div class="about-badge-item fade-up fade-up-delay-4">
-            <div class="about-badge-icon" aria-hidden="true"><svg width="17" height="17"><use href="#ic-map"/></svg></div>
-            <span class="about-badge-text">Magyarország &amp; Románia</span>
-          </div>
-        </div>
+        <a href="#contact" class="btn btn-primary fade-up fade-up-delay-4" style="width:fit-content; margin-top:8px;" data-i18n="hero_cta_primary">Ajánlatot kérek</a>
       </div>
+
     </div>
   </div>
 </section>
@@ -994,7 +1001,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeof LangManager === 'undefined') return;
   const patch = {
     hu: {
-      about_title:          'Vígvári Sándor – Gépészmérnök,<br>több mint egy évtized tapasztalattal',
+      about_title:          'Vígvári Sándor – Gépészmérnök — több mint egy évtized tapasztalattal',
       about_p1:             'Gépészmérnökként 2008 óta foglalkozom traktorok klímarendszereivel és autóvillamosságával. A mindennapi munkám során pontosan látom, milyen problémákkal találkoznak a gazdálkodók a szántóföldön, és hogy mennyire fontos a megbízható, pontos működés.',
       about_p2:             'A robotkormány rendszerekkel azért kezdtem el foglalkozni, mert egy jól beállított rendszer nemcsak kényelmesebbé teszi a munkát, hanem jelentős üzemanyag- és időmegtakarítást is eredményez.',
       about_p3:             'A FarmGPS mögött nem egy webshop, hanem valódi gyakorlati tapasztalat áll. Nálunk nem csak értékesítjük a rendszereket, hanem saját kezűleg szereljük és állítjuk be azokat — így biztos lehet benne, hogy a robotkormány pontosan és megbízhatóan fog működni az Ön traktorában.',
@@ -1006,7 +1013,7 @@ document.addEventListener('DOMContentLoaded', () => {
       about_check4:         'Hosszú távú megbízható kapcsolat',
     },
     ro: {
-      about_title:          'Vígvári Sándor – Inginer mecanic,<br>cu peste un deceniu de experiență',
+      about_title:          'Vígvári Sándor – Inginer mecanic — cu peste un deceniu de experiență',
       about_p1:             'Ca inginer mecanic, mă ocup din 2008 de sistemele de climatizare ale tractoarelor și electrica auto. În munca de zi cu zi văd exact cu ce probleme se confruntă agricultorii pe câmp și cât de importantă este funcționarea fiabilă și precisă.',
       about_p2:             'Am început să mă ocup de sistemele de pilotaj automat pentru că un sistem bine calibrat nu doar ușurează munca, ci aduce și economii semnificative de combustibil și timp.',
       about_p3:             'În spatele FarmGPS nu se află un magazin online, ci experiență practică reală. Nu doar vindem sistemele, ci le montăm și le configurăm personal — astfel puteți fi sigur că pilotul automat va funcționa precis și fiabil în tractorul dumneavoastră.',

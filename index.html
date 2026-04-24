@@ -67,6 +67,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* About checklist */
+    .about-checklist { margin: 20px 0 24px; background: #E8F5E9; border: 1px solid #A5D6A7; border-radius: 14px; padding: 18px 20px; }
+    .about-checklist-title { font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 700; color: #1f5c1f; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .about-checklist-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .about-checklist-list li { display: flex; align-items: center; gap: 10px; font-size: 0.93rem; font-weight: 600; color: #1F2937; }
+    .about-checklist-list li::before { content: ''; width: 21px; height: 21px; min-width: 21px; background: #4CAF50; border-radius: 50%; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E"); background-size: 13px; background-repeat: no-repeat; background-position: center; }
+  </style>
 </head>
 <body>
 
@@ -284,12 +292,25 @@
 
       <div class="about-content">
         <span class="section-badge fade-up" data-i18n="about_badge">Rólunk</span>
-        <h2 class="section-title fade-up fade-up-delay-1" data-i18n="about_title">Vígvári Sándor —<br>A precíziós mezőgazdaság szakértője</h2>
+        <h2 class="section-title fade-up fade-up-delay-1" data-i18n="about_title">Vígvári Sándor – Gépészmérnök,<br>több mint egy évtized tapasztalattal</h2>
         <div class="about-text">
-          <p class="fade-up fade-up-delay-2" data-i18n="about_p1">A SUGÁR-KER 2002 Kereskedelmi és Szolgáltató Betéti Társaság tulajdonosaként Vígvári Sándor több évtizedes tapasztalattal rendelkezik a mezőgazdasági technológia területén. Szaktudása és ügyfélközpontú szemlélete tette a FarmGPS-t megbízható partnerré a gazdálkodók számára.</p>
-          <p class="fade-up fade-up-delay-3" data-i18n="about_p2">A Hi-Target és FJ Dynamics prémium márkák magyarországi és külföldi forgalmazójaként minden egyes beépítést személyesen felügyel — garantálva, hogy az Ön traktora a legjobb kezekben van. Munkáját a precizitás, a megbízhatóság és a hosszú távú ügyfélkapcsolat határozza meg.</p>
-          <p class="fade-up fade-up-delay-4" data-i18n="about_p3">Tevékenységünk elsősorban GPS robotkormány-rendszerek értékesítésére és beépítésére fókuszál; emellett klímaszerelési szolgáltatásokat is nyújtunk.</p>
+          <p class="fade-up fade-up-delay-2" data-i18n="about_p1">Gépészmérnökként 2008 óta foglalkozom traktorok klímarendszereivel és autóvillamosságával. A mindennapi munkám során pontosan látom, milyen problémákkal találkoznak a gazdálkodók a szántóföldön, és hogy mennyire fontos a megbízható, pontos működés.</p>
+          <p class="fade-up fade-up-delay-3" data-i18n="about_p2">A robotkormány rendszerekkel azért kezdtem el foglalkozni, mert egy jól beállított rendszer nemcsak kényelmesebbé teszi a munkát, hanem jelentős üzemanyag- és időmegtakarítást is eredményez.</p>
+          <p class="fade-up fade-up-delay-4" data-i18n="about_p3">A FarmGPS mögött nem egy webshop, hanem valódi gyakorlati tapasztalat áll. Nálunk nem csak értékesítjük a rendszereket, hanem saját kezűleg szereljük és állítjuk be azokat — így biztos lehet benne, hogy a robotkormány pontosan és megbízhatóan fog működni az Ön traktorában.</p>
+          <p class="fade-up fade-up-delay-4" data-i18n="about_p4">Hivatalos magyarországi forgalmazói kapcsolatban állunk a Hi-Target márkával, és az FJ Dynamics robotkormány rendszereket is több éve sikeresen forgalmazzuk és telepítjük. Magyarország teljes területén, valamint Romániában is rendelkezünk elégedett ügyfelekkel.</p>
         </div>
+
+        <!-- Amit a FarmGPS-nél kap -->
+        <div class="about-checklist fade-up fade-up-delay-4">
+          <div class="about-checklist-title" data-i18n="about_checklist_title">Amit a FarmGPS-nél kap:</div>
+          <ul class="about-checklist-list">
+            <li data-i18n="about_check1">Szakszerű telepítés a saját traktorára</li>
+            <li data-i18n="about_check2">Pontos beállítás a munkavégzéshez</li>
+            <li data-i18n="about_check3">Személyes segítség és támogatás</li>
+            <li data-i18n="about_check4">Hosszú távú megbízható kapcsolat</li>
+          </ul>
+        </div>
+
         <div class="about-badges">
           <div class="about-badge-item fade-up fade-up-delay-1">
             <div class="about-badge-icon" aria-hidden="true"><svg width="17" height="17"><use href="#ic-award"/></svg></div>
@@ -305,7 +326,7 @@
           </div>
           <div class="about-badge-item fade-up fade-up-delay-4">
             <div class="about-badge-icon" aria-hidden="true"><svg width="17" height="17"><use href="#ic-map"/></svg></div>
-            <span class="about-badge-text">Magyarország &amp; környező&nbsp;országok</span>
+            <span class="about-badge-text">Magyarország &amp; Románia</span>
           </div>
         </div>
       </div>
@@ -967,5 +988,45 @@
   document.getElementById('footer-year').textContent = new Date().getFullYear();
 </script>
 
+<!-- Translation patch for new about keys -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  if (typeof LangManager === 'undefined') return;
+  const patch = {
+    hu: {
+      about_title:          'Vígvári Sándor – Gépészmérnök,<br>több mint egy évtized tapasztalattal',
+      about_p1:             'Gépészmérnökként 2008 óta foglalkozom traktorok klímarendszereivel és autóvillamosságával. A mindennapi munkám során pontosan látom, milyen problémákkal találkoznak a gazdálkodók a szántóföldön, és hogy mennyire fontos a megbízható, pontos működés.',
+      about_p2:             'A robotkormány rendszerekkel azért kezdtem el foglalkozni, mert egy jól beállított rendszer nemcsak kényelmesebbé teszi a munkát, hanem jelentős üzemanyag- és időmegtakarítást is eredményez.',
+      about_p3:             'A FarmGPS mögött nem egy webshop, hanem valódi gyakorlati tapasztalat áll. Nálunk nem csak értékesítjük a rendszereket, hanem saját kezűleg szereljük és állítjuk be azokat — így biztos lehet benne, hogy a robotkormány pontosan és megbízhatóan fog működni az Ön traktorában.',
+      about_p4:             'Hivatalos magyarországi forgalmazói kapcsolatban állunk a Hi-Target márkával, és az FJ Dynamics robotkormány rendszereket is több éve sikeresen forgalmazzuk és telepítjük. Magyarország teljes területén, valamint Romániában is rendelkezünk elégedett ügyfelekkel.',
+      about_checklist_title:'Amit a FarmGPS-nél kap:',
+      about_check1:         'Szakszerű telepítés a saját traktorára',
+      about_check2:         'Pontos beállítás a munkavégzéshez',
+      about_check3:         'Személyes segítség és támogatás',
+      about_check4:         'Hosszú távú megbízható kapcsolat',
+    },
+    ro: {
+      about_title:          'Vígvári Sándor – Inginer mecanic,<br>cu peste un deceniu de experiență',
+      about_p1:             'Ca inginer mecanic, mă ocup din 2008 de sistemele de climatizare ale tractoarelor și electrica auto. În munca de zi cu zi văd exact cu ce probleme se confruntă agricultorii pe câmp și cât de importantă este funcționarea fiabilă și precisă.',
+      about_p2:             'Am început să mă ocup de sistemele de pilotaj automat pentru că un sistem bine calibrat nu doar ușurează munca, ci aduce și economii semnificative de combustibil și timp.',
+      about_p3:             'În spatele FarmGPS nu se află un magazin online, ci experiență practică reală. Nu doar vindem sistemele, ci le montăm și le configurăm personal — astfel puteți fi sigur că pilotul automat va funcționa precis și fiabil în tractorul dumneavoastră.',
+      about_p4:             'Suntem distribuitor oficial în Ungaria pentru marca Hi-Target și distribuim și instalăm cu succes sistemele de pilotaj automat FJ Dynamics de mai mulți ani. Avem clienți mulțumiți pe întreg teritoriul Ungariei, precum și în România.',
+      about_checklist_title:'Ce primiți la FarmGPS:',
+      about_check1:         'Instalare profesională pe tractorul dumneavoastră',
+      about_check2:         'Configurare precisă pentru activitățile agricole',
+      about_check3:         'Asistență și suport personal',
+      about_check4:         'Parteneriat de lungă durată și de încredere',
+    }
+  };
+  // Merge into existing translations
+  if (window._translations) {
+    Object.keys(patch).forEach(lang => {
+      Object.assign(window._translations[lang] || {}, patch[lang]);
+    });
+    // Re-apply current language
+    LangManager.apply(LangManager.current || 'hu');
+  }
+});
+</script>
 </body>
 </html>

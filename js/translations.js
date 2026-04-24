@@ -30,11 +30,13 @@ const translations = {
 
     // About
     about_badge: "Rólunk",
-    about_title: "Vígvári Sándor – Gépészmérnök,<br>több mint egy évtized tapasztalattal",
+    about_title: "Vígvári Sándor – Gépészmérnök — több mint egy évtized tapasztalattal",
     about_p1: "Gépészmérnökként 2008 óta foglalkozom traktorok klímarendszereivel és autóvillamosságával. A mindennapi munkám során pontosan látom, milyen problémákkal találkoznak a gazdálkodók a szántóföldön, és hogy mennyire fontos a megbízható, pontos működés.",
     about_p2: "A robotkormány rendszerekkel azért kezdtem el foglalkozni, mert egy jól beállított rendszer nemcsak kényelmesebbé teszi a munkát, hanem jelentős üzemanyag- és időmegtakarítást is eredményez.",
-    about_p3: "A FarmGPS mögött nem egy webshop, hanem valódi gyakorlati tapasztalat áll. Nálunk nem csak értékesítjük a rendszereket, hanem saját kezűleg szereljük és állítjuk be azokat — így biztos lehet benne, hogy a robotkormány pontosan és megbízhatóan fog működni az Ön traktorában.",
-    about_p4: "Hivatalos magyarországi forgalmazói kapcsolatban állunk a Hi-Target márkával, és az FJ Dynamics robotkormány rendszereket is több éve sikeresen forgalmazzuk és telepítjük. Magyarország teljes területén, valamint Romániában is rendelkezünk elégedett ügyfelekkel. A szakmai hátteret a SUGÁR-KER 2002 Bt. és az ismert MTZKlíma tevékenység adja.",
+    about_p3: "A FarmGPS mögött nem egy webshop, hanem valódi gyakorlati tapasztalat áll. Nálunk nem csak értékesítjük a rendszereket, hanem saját kezűleg szereljük és állítjuk be azokat, így biztos lehet benne, hogy a robotkormány pontosan és megbízhatóan fog működni az Ön traktorában.",
+    about_p4: "Hivatalos magyarországi forgalmazói kapcsolatban állunk a Hi-Target márkával, és az FJ Dynamics robotkormány rendszereket is több éve sikeresen forgalmazzuk és telepítjük. Magyarország teljes területén, valamint Romániában is rendelkezünk elégedett ügyfelekkel.",
+    about_p5: "A szakmai hátteret a SUGÁR-KER 2002 Bt. és az ismert MTZKlíma tevékenység adja, ahol traktorok klímarendszereivel és egyéb műszaki megoldásaival foglalkozunk.",
+    about_p6: "Ha szeretné kipróbálni, hogyan működik egy robotkormány a saját gépén, keressen bizalommal.",
     about_checklist_title: "Amit a FarmGPS-nél kap:",
     about_check1: "Szakszerű telepítés a saját traktorára",
     about_check2: "Pontos beállítás a munkavégzéshez",
@@ -194,7 +196,7 @@ const translations = {
 
     // About
     about_badge: "Despre noi",
-    about_title: "Vígvári Sándor – Inginer mecanic,<br>cu peste un deceniu de experiență",
+    about_title: "Vígvári Sándor – Inginer mecanic — cu peste un deceniu de experiență",
     about_p1: "Ca inginer mecanic, mă ocup din 2008 de sistemele de climatizare ale tractoarelor și electrica auto. În munca de zi cu zi văd exact cu ce probleme se confruntă agricultorii pe câmp și cât de importantă este funcționarea fiabilă și precisă.",
     about_p2: "Am început să mă ocup de sistemele de pilotaj automat pentru că un sistem bine calibrat nu doar ușurează munca, ci aduce și economii semnificative de combustibil și timp.",
     about_p3: "În spatele FarmGPS nu se află un magazin online, ci experiență practică reală. Nu doar vindem sistemele, ci le montăm și le configurăm personal — astfel puteți fi sigur că pilotul automat va funcționa precis și fiabil în tractorul dumneavoastră.",
@@ -355,7 +357,7 @@ const LangManager = {
         if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
           el.placeholder = translations[lang][key];
         } else {
-          el.textContent = translations[lang][key];
+          el.innerHTML = translations[lang][key];
         }
       }
     });
